@@ -5,11 +5,11 @@ function ItemGetName(itemID, _sequence){
 	switch(itemID) {
 		case -1: return "-";break;
 		case 0: draw_set_color(c_green);return "Wheat Seed" + "x" + string(oPlayer.items[_sequence, 1]);break;
-		case 1: return "Wheat" + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 1: draw_set_color(c_black);return "Wheat" + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 2: draw_set_color(c_green);return "Iron Seed" + "x" + string(oPlayer.items[_sequence, 1]);break;
-		case 3: return "Iron" + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 3: draw_set_color(c_black);return "Iron" + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 4: draw_set_color(c_green);return "Powder Seed" + "x" + string(oPlayer.items[_sequence, 1]);break;
-		case 5: return "Powder" + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 5: draw_set_color(c_black);return "Powder" + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 6: draw_set_color(c_maroon);return "Pistol";break;
 		case 7: draw_set_color(c_maroon);return "Bullet" + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 8: draw_set_color(c_orange);return "Blindage" + "x" + string(oPlayer.items[_sequence, 1]);break;

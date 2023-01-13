@@ -35,6 +35,8 @@ shift[2] = -1;//ItemPosition
 
 time = 0;//Per turn per time
 
+depth = -100//Depth
+
 uTime = shader_get_uniform(shNight, "u_time");
 
 day = 0;//per 200 per day, per 200 per night
