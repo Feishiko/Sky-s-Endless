@@ -21,6 +21,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_432574A3","properties":[],"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":132.0,"y":132.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_9935FEA","properties":[],"isDnd":false,"objectId":{"name":"oGameCont","path":"objects/oGameCont/oGameCont.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_78BCA0F9","properties":[],"isDnd":false,"objectId":{"name":"oDeath","path":"objects/oDeath/oDeath.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_21775DAA","properties":[],"isDnd":false,"objectId":{"name":"oHelp","path":"objects/oHelp/oHelp.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":48.0,"y":0.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Effect_1","visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_fractal_noise","properties":[
         {"type":0,"name":"g_FractalNoiseScale","value":"132",},
@@ -41,6 +42,7 @@
     {"name":"inst_432574A3","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_9935FEA","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_78BCA0F9","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_21775DAA","path":"rooms/rmGame/rmGame.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

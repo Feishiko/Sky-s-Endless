@@ -6,6 +6,7 @@ gridY = y div 8;
 
 walkDuration = 0;
 buildingMode = false;//Build Blindage
+buildingStuff = oBlindage;//What to build in building mode
 
 depth = -100;
 
@@ -19,3 +20,5 @@ deathTimer = 0;
 ItemPick(0, 2);
 ItemPick(2, 2);
 ItemPick(4, 2);
+ItemPick(8, 99);
+ItemPick(10, 99);

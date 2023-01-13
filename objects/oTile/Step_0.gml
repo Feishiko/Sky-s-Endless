@@ -1,5 +1,7 @@
 tiles = oGameCont.tiles[row, column];
 
+shineTimer++;
+
 if(tiles == -1) {
 	visible = false;
 }else {

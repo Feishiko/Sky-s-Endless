@@ -119,8 +119,15 @@ if(hp > 0) {
 		if(LEFT) {
 			var border = collision_point(x - 8, y, oBorder, 1, 1);
 			if(border) {
-				var blindage = instance_create_depth(x - 8, y, -20, oBlindage);
-				blindage.image_angle = 180;
+				if(buildingStuff == oBlindage) {
+					var stuff = instance_create_depth(x - 8, y, -20, buildingStuff);
+					stuff.image_angle = 180;
+				}
+				if(buildingStuff == oTile) {
+					audio_play_sound(sndUse, 10, false);
+					var space = collision_point(x - 8, y, oTile, 1, 1);
+					oGameCont.tiles[space.row, space.column] = 1;	
+				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
 				TimePassed();
@@ -129,7 +136,14 @@ if(hp > 0) {
 		if(RIGHT) {
 			var border = collision_point(x + 8, y, oBorder, 1, 1);
 			if(border) {
-				instance_create_depth(x + 8, y, -20, oBlindage);
+				if(buildingStuff == oBlindage) {
+					instance_create_depth(x + 8, y, -20, buildingStuff);
+				}
+				if(buildingStuff == oTile) {
+					audio_play_sound(sndUse, 10, false);
+					var space = collision_point(x + 8, y, oTile, 1, 1);
+					oGameCont.tiles[space.row, space.column] = 1;	
+				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
 				TimePassed();
@@ -138,8 +152,15 @@ if(hp > 0) {
 		if(UP) {
 			var border = collision_point(x, y - 8, oBorder, 1, 1);
 			if(border) {
-				var blindage = instance_create_depth(x, y - 8, -20, oBlindage);
-				blindage.image_angle = 90;
+				if(buildingStuff == oBlindage) {
+					var stuff = instance_create_depth(x, y - 8, -20, buildingStuff);
+					stuff.image_angle = 90;
+				}
+				if(buildingStuff == oTile) {
+					audio_play_sound(sndUse, 10, false);
+					var space = collision_point(x, y - 8, oTile, 1, 1);
+					oGameCont.tiles[space.row, space.column] = 1;	
+				}
 				instance_destroy(oBorder);
 				buildingMode = false;
 				TimePassed();
@@ -148,8 +169,15 @@ if(hp > 0) {
 		if(DOWN) {
 			var border = collision_point(x, y + 8, oBorder, 1, 1);
 			if(border) {
-				var blindage = instance_create_depth(x, y + 8, -20, oBlindage);
-				blindage.image_angle = 270;
+				if(buildingStuff == oBlindage) {
+					var stuff = instance_create_depth(x, y + 8, -20, buildingStuff);
+					stuff.image_angle = 270;
+				}
+				if(buildingStuff == oTile) {
+					audio_play_sound(sndUse, 10, false);
+					var space = collision_point(x, y + 8, oTile, 1, 1);
+					oGameCont.tiles[space.row, space.column] = 1;	
+				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
 				TimePassed();

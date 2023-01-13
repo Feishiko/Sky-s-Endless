@@ -49,6 +49,7 @@ function ItemUse(_sequence) {
 	//Building Type
 	//Plough
 	if(oPlayer.items[_sequence, 0] == 10) {
+		/*
 		var lenX = lengthdir_x(8, image_angle);
 		var lenY = lengthdir_y(8, image_angle);
 		var space = collision_point(x + lenX, y + lenY, oTile, 1, 1);
@@ -57,6 +58,23 @@ function ItemUse(_sequence) {
 			audio_play_sound(sndUse, 10, false);
 			oPlayer.items[_sequence, 1] -= 1;
 			oGameCont.tiles[space.row, space.column] = 1;
+		}
+		*/
+		for(var face = 0; face < 4; face++) {
+			var lenX = lengthdir_x(8, image_angle + (90 * face));
+			var lenY = lengthdir_y(8, image_angle + (90 * face));
+			var space = collision_point(x + lenX, y + lenY, oTile, 1, 1);	
+			//var blindage = collision_point(x + lenX, y + lenY, oTile, 1, 1);
+			if(space.tiles == -1) {
+				//TimePassed();
+				oPlayer.buildingMode = true;
+				instance_create_depth(x + lenX, y + lenY, -20, oBorder);
+			}	
+		}
+		
+		if(oPlayer.buildingMode) {
+			oPlayer.buildingStuff = oTile;
+			oPlayer.items[_sequence, 1] -= 1;
 		}
 	}
 	//Blindage
@@ -74,6 +92,7 @@ function ItemUse(_sequence) {
 		}
 		
 		if(oPlayer.buildingMode) {
+			oPlayer.buildingStuff = oBlindage;
 			oPlayer.items[_sequence, 1] -= 1;
 		}
 	}

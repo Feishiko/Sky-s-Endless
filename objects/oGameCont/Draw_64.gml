@@ -22,7 +22,9 @@ if(oPlayer.hp > 0) {
 	draw_text(120, room_height - 20, string(messageBox[clamp(mouse_x div 8, 0, (room_width div 8) - 1), clamp(mouse_y div 8, 0, (room_height div 8) - 1)]));
 	draw_set_color(c_black);
 	for(var itemsNumber = 0; itemsNumber < 10; itemsNumber++) {
-		draw_text(20, 20 + itemsNumber * 10, string(itemsNumber + 1) + "." + ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber));
+		draw_text(20, 20 + itemsNumber * 10, string(itemsNumber + 1) + ".");
+		draw_text(30, 20 + itemsNumber * 10, ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))
+		draw_set_color(c_black);
 	}
 	//Craft Mode
 	if(craftMode) {
