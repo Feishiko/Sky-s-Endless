@@ -1,0 +1,7 @@
+{
+    "menu_option_1" : "START",
+    "menu_option_2" : "HELP",
+    "menu_option_3" : "QUIT",
+    "staff" : "ALL BY FEISHIKO",
+    "help" : "WASD/ARROW KEYS - MOVE\nMOUSE HOVER - CHECK\nLMB/E - USE\nSPACEBAR - PICK/HARVEST\nQ - TOSS\n./RMB - SKIP A TURN\n1-0/MOUSE WHEEL - SELECT ITEMS\nC - CRAFT\nSHIFT - MOVE ITEMS\n? - CHECK OR CLOSE THE HELP"
+}

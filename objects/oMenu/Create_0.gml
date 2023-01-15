@@ -1,6 +1,6 @@
-options[0] = "Start";
-options[1] = "Help";
-options[2] = "Quit";
+options[0] = JsonGetValue("menu_option_1");
+options[1] = JsonGetValue("menu_option_2");
+options[2] = JsonGetValue("menu_option_3");
 
 pointer = 0;
 

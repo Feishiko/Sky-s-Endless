@@ -11,6 +11,7 @@
     {"id":{"name":"sBorder","path":"sprites/sBorder/sBorder.yy",},"order":8,},
     {"id":{"name":"shNight","path":"shaders/shNight/shNight.yy",},"order":1,},
     {"id":{"name":"sndGrenade","path":"sounds/sndGrenade/sndGrenade.yy",},"order":4,},
+    {"id":{"name":"fontPixelMenuChs","path":"fonts/fontPixelMenuChs/fontPixelMenuChs.yy",},"order":2,},
     {"id":{"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},"order":3,},
     {"id":{"name":"sBlood","path":"sprites/sBlood/sBlood.yy",},"order":10,},
     {"id":{"name":"Craft","path":"scripts/Craft/Craft.yy",},"order":7,},
@@ -30,6 +31,8 @@
     {"id":{"name":"musDay","path":"sounds/musDay/musDay.yy",},"order":10,},
     {"id":{"name":"sTiles","path":"sprites/sTiles/sTiles.yy",},"order":4,},
     {"id":{"name":"oBlood","path":"objects/oBlood/oBlood.yy",},"order":12,},
+    {"id":{"name":"JsonGetValue","path":"scripts/JsonGetValue/JsonGetValue.yy",},"order":14,},
+    {"id":{"name":"FontSet","path":"scripts/FontSet/FontSet.yy",},"order":15,},
     {"id":{"name":"oStart","path":"objects/oStart/oStart.yy",},"order":0,},
     {"id":{"name":"sPlayerWalk","path":"sprites/sPlayerWalk/sPlayerWalk.yy",},"order":1,},
     {"id":{"name":"ItemDelete","path":"scripts/ItemDelete/ItemDelete.yy",},"order":8,},
@@ -55,6 +58,7 @@
     {"id":{"name":"sndPick","path":"sounds/sndPick/sndPick.yy",},"order":2,},
     {"id":{"name":"Blood","path":"scripts/Blood/Blood.yy",},"order":11,},
     {"id":{"name":"oHarvest","path":"objects/oHarvest/oHarvest.yy",},"order":8,},
+    {"id":{"name":"fontPixelSmallChs","path":"fonts/fontPixelSmallChs/fontPixelSmallChs.yy",},"order":3,},
     {"id":{"name":"oShoot","path":"objects/oShoot/oShoot.yy",},"order":15,},
     {"id":{"name":"CraftListExists","path":"scripts/CraftListExists/CraftListExists.yy",},"order":9,},
     {"id":{"name":"sMonster","path":"sprites/sMonster/sMonster.yy",},"order":9,},
@@ -109,7 +113,10 @@
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"chinese.json","CopyToMask":-1,"filePath":"datafiles/Languages",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"english.json","CopyToMask":-1,"filePath":"datafiles/Languages",},
+  ],
   "MetaData": {
     "IDEVersion": "2022.11.1.56",
   },
