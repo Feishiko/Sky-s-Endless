@@ -10,7 +10,7 @@ for(var row = 0; row < room_width div 8; row++) {
 
 for(var row = 0; row < room_width div 8; row++) {
 	for(var column = 0; column < room_height div 8; column++) {
-		messageBox[row, column] = "Empty";	
+		messageBox[row, column] = JsonGetValue("message_box_0");	
 	}
 }
 

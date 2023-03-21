@@ -180,48 +180,48 @@ if(oPlayer.hp > 0) {
 
 	for(var row = 0; row < room_width div 8; row++) {
 		for(var column = 0; column < room_height div 8; column++) {
-			messageBox[row, column] = "Empty";	
+			messageBox[row, column] = JsonGetValue("message_box_0");	
 		}
 	}
 
 	with(oTile) {
 		switch(tiles) {
-			case 1: oGameCont.messageBox[x div 8, y div 8] = "Plough";break;
-			case 2: oGameCont.messageBox[x div 8, y div 8] = "Growing Wheat";break;
-			case 3: oGameCont.messageBox[x div 8, y div 8] = "Wheat";break;
-			case 4: oGameCont.messageBox[x div 8, y div 8] = "Growing Iron";break;
-			case 5: oGameCont.messageBox[x div 8, y div 8] = "Iron";break;
-			case 6: oGameCont.messageBox[x div 8, y div 8] = "Growing Powder";break;
-			case 7: oGameCont.messageBox[x div 8, y div 8] = "Powder";break;
+			case 1: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_1");break;
+			case 2: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_2");break;
+			case 3: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_3");break;
+			case 4: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_4");break;
+			case 5: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_5");break;
+			case 6: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_6");break;
+			case 7: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_7");break;
 		}
 	}
 
 	with(oItem) {
 		switch(itemID) {
-			case 0: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Wheat Seeds here";break;
-			case 1: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Wheats here";break;
-			case 2: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Iron Seeds here";break; 
-			case 3: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Irons here";break; 
-			case 4: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Powder Seeds here";break; 
-			case 5: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Powders here";break; 
-			case 6: oGameCont.messageBox[x div 8, y div 8] = "There is a Pistol here";break; 
-			case 7: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Bullets here";break; 
-			case 8: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Blindages here";break;
-			case 9: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Breads here";break; 
-			case 10: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Ploughs here";break; 
-			case 11: oGameCont.messageBox[x div 8, y div 8] = "There are " + string(number) + " Grenades here";break; 
+			case 0: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_8");break;
+			case 1: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_9");break;
+			case 2: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_10");break; 
+			case 3: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_11");break; 
+			case 4: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_12");break; 
+			case 5: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_13");break; 
+			case 6: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_14");break; 
+			case 7: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_15");break; 
+			case 8: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_16");break;
+			case 9: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_17");break; 
+			case 10: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_18");break; 
+			case 11: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_19");break; 
 		}
 	}
 
 	with(oBlindage) {
-		oGameCont.messageBox[x div 8, y div 8] = "There is a Blindage";	
+		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20");	
 	}
 
 	with(oMonster) {
-		oGameCont.messageBox[gridX, gridY] = "This is a Monster";	
+		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21");	
 	}
 
 	with(oPlayer) {
-		oGameCont.messageBox[gridX, gridY] = "This is you";
+		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_22");
 	}
 }

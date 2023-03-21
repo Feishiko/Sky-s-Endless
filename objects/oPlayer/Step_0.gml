@@ -3,7 +3,7 @@ if(hp > 0) {
 	var RIGHT = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
 	var UP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 	var DOWN = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
-	var HELP = keyboard_check_pressed(191) && keyboard_check(vk_shift);
+	var HELP = keyboard_check_pressed(vk_tab);
 	var PASS = keyboard_check_pressed(190) || mouse_check_button_pressed(mb_right);
 	var USE = keyboard_check_pressed(ord("E")) || mouse_check_button_pressed(mb_left);
 	var PICK = keyboard_check_pressed(vk_space);
