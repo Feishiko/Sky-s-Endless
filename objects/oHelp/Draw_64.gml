@@ -8,11 +8,11 @@ if(global.language == 0){
 
 	draw_text(room_width - 20, 160, JsonGetValue("help"))
 }else {
-	draw_rectangle_color(room_width - 136, 115, room_width - 20, room_height - 32, c_black, c_black, c_black, c_black, false);
+	draw_rectangle_color(room_width - 136, 95, room_width - 20, room_height - 15, c_black, c_black, c_black, c_black, false);
 
 	draw_set_color(c_white);
 
-	draw_text(room_width - 20, 115, JsonGetValue("help"))	
+	draw_text(room_width - 20, 95, JsonGetValue("help"))	
 }
 
 draw_set_color(c_white);

@@ -185,13 +185,14 @@ if(oPlayer.hp > 0) {
 	}
 
 	with(oTile) {
+		var persent = + "(" + string(growth) + "/" + string(growthTo) + ")";
 		switch(tiles) {
 			case 1: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_1");break;
-			case 2: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_2");break;
+			case 2: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_2") + persent;break;
 			case 3: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_3");break;
-			case 4: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_4");break;
+			case 4: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_4") + persent;break;
 			case 5: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_5");break;
-			case 6: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_6");break;
+			case 6: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_6") + persent;break;
 			case 7: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_7");break;
 		}
 	}
