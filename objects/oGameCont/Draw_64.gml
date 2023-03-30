@@ -43,6 +43,15 @@ if(oPlayer.hp > 0) {
 					default: draw_text(90, 20 + sequence * 10, "");break;
 				}
 			}
+			// Can't be created(English ver)
+			draw_set_color(c_red);
+			var _seq = 0;
+			for(var sequence = 0; sequence < 6; sequence++) {
+				if(!CraftListExists(6 + sequence)) {
+					draw_text(90, 20 + craftListMax * 10 + _seq * 10, JsonGetValue("craft_list_" + string(sequence + 1)));
+					_seq += 1
+				}
+			}
 		}
 		
 	} else {
@@ -78,6 +87,15 @@ if(oPlayer.hp > 0) {
 					case 10: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_5"));break;
 					case 11: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_6"));break;
 					default: draw_text(90, 20 + sequence * 14, "");break;
+				}
+			}
+			// Can't be created(Chinese ver)
+			draw_set_color(c_red);
+			var _seq = 0;
+			for(var sequence = 0; sequence < 6; sequence++) {
+				if(!CraftListExists(6 + sequence)) {
+					draw_text(90, 20 + craftListMax * 14 + _seq * 14, JsonGetValue("craft_list_" + string(sequence + 1)));
+					_seq += 1
 				}
 			}
 		}

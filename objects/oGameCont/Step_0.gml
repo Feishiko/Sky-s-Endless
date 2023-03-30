@@ -92,7 +92,6 @@ if(oPlayer.hp > 0) {
 	}
 
 	if(craftMode) {
-		var craftListMax = 6;
 		for(var sequence = 0; sequence < 6; sequence++) {
 			if(craftList[sequence] == -1) {
 				craftListMax = sequence;
@@ -127,13 +126,25 @@ if(oPlayer.hp > 0) {
 	//Weapon System
 	//Pistol
 	if(oPlayer.items[oGameCont.select, 0] == 6) {
-		var shootTarget = collision_point(mouse_x, mouse_y, oMonster, 0, 1);
-		if(shootTarget) {
-			if(!instance_exists(oBorder)) {
-				instance_create_depth(shootTarget.x, shootTarget.y, -30, oBorder);
+		var shootTargetMonster = collision_rectangle((mouse_x div 8)*8, (mouse_y div 8)*8, (mouse_x div 8)*8 + 7, (mouse_y div 8)*8 + 7, oMonster, 1, 0);
+		var shootTargetBlindage = collision_rectangle((mouse_x div 8)*8, (mouse_y div 8)*8, (mouse_x div 8)*8 + 7, (mouse_y div 8)*8 + 7, oBlindage, 1, 0);
+		if(shootTargetMonster || shootTargetBlindage) {
+			if(shootTargetMonster) {
+				if(!instance_exists(oBorder)) {
+					instance_create_depth(shootTargetMonster.x, shootTargetMonster.y, -30, oBorder);
+				}	
 			}
+			
+			if(shootTargetBlindage) {
+				if(!instance_exists(oBorder)) {
+					instance_create_depth(shootTargetBlindage.x, shootTargetBlindage.y, -30, oBorder);
+				}	
+			}
+			
 		}else {
-			instance_destroy(oBorder);	
+			with(oBorder){
+				instance_destroy();	
+			}
 		}
 	}
 	//Grenade
@@ -215,11 +226,11 @@ if(oPlayer.hp > 0) {
 	}
 
 	with(oBlindage) {
-		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20");	
+		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/4)";	
 	}
 
 	with(oMonster) {
-		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21");	
+		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21") + "(" + string(hp) + "/2)";	
 	}
 
 	with(oPlayer) {

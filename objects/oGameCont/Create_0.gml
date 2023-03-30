@@ -33,6 +33,8 @@ shift[0] = -1;//ItemID
 shift[1] = -1;//ItemNumber
 shift[2] = -1;//ItemPosition
 
+craftListMax = 6;//CraftList's Max list
+
 time = 0;//Per turn per time
 
 depth = -100//Depth
