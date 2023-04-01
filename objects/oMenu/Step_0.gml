@@ -2,6 +2,9 @@ var ENTER = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
 var UP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || mouse_wheel_up();
 var DOWN = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || mouse_wheel_down();
 
+// MUSIC
+MusicPlay(musMenu);
+
 if(UP && pointer > 0) {
 	pointer -= 1;	
 	audio_play_sound(sndSelectItems, 10, false);

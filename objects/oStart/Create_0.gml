@@ -25,4 +25,7 @@ global.json = json_parse(global.text);
 
 file_text_close(file);
 
+global.Emitter = audio_emitter_create();
+audio_emitter_gain(global.Emitter, 0);
+
 room_goto_next();

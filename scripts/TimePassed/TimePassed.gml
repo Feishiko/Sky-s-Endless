@@ -18,4 +18,8 @@ function TimePassed(){
 	with(oNight) {
 		createTimer += 1;	
 	}
+	
+	with(oBorder) {
+		instance_destroy();	
+	}
 }

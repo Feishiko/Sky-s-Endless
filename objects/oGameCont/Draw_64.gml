@@ -4,6 +4,8 @@ shader_set_uniform_f(uTime, time*((3.14/400)));
 draw_surface(application_surface, 0, 0);
 shader_reset();
 
+draw_text(0, 0, craftListMax);
+
 if(oPlayer.hp > 0) {
 
 	FontSet("small");

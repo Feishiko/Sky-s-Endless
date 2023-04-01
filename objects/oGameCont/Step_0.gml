@@ -88,16 +88,16 @@ if(oPlayer.hp > 0) {
 			if(ItemExists(3, 1) && ItemExists(5, 2)) {
 				CraftListPush(11);	
 			}
+			craftListMax = 0;
+			for(var sequence = 0; sequence < 6; sequence++) {
+				if(craftList[sequence] != -1) {
+					craftListMax += 1;
+				}
+			}
 		}
 	}
 
 	if(craftMode) {
-		for(var sequence = 0; sequence < 6; sequence++) {
-			if(craftList[sequence] == -1) {
-				craftListMax = sequence;
-				break;	
-			}
-		}
 		if(UP || mouse_wheel_up()) {
 			if(craftSelect > 0){
 				audio_play_sound(sndSelectItems, 0, false);
@@ -172,19 +172,24 @@ if(oPlayer.hp > 0) {
 	}
 	//Night
 	if(day mod 1 != 0) {
-		if(!audio_is_playing(musNight) && !audio_is_playing(musDay)) {
+		/*if(!audio_is_playing(musNight) && !audio_is_playing(musDay)) {
 			audio_play_sound(musNight, 200, false);	
-		}
+		}*/
 		if(!instance_exists(oNight)) {
 			instance_create_depth(0, 0, -40, oNight);	
 		}
 	}else {
-		if(!audio_is_playing(musDay) && !audio_is_playing(musNight)) {
+		/*if(!audio_is_playing(musDay) && !audio_is_playing(musNight)) {
 			audio_play_sound(musDay, 200, false);	
-		}
+		}*/
 		if(instance_exists(oNight)) {
 			instance_destroy(oNight);		
 		}
+	}
+	if(instance_exists(oNight)) {
+		MusicPlay(musNight);	
+	}else {
+		MusicPlay(musDay);	
 	}
 	
 	//MessageBox
