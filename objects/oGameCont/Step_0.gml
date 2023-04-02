@@ -149,7 +149,7 @@ if(oPlayer.hp > 0) {
 	}
 	//Grenade
 	if(oPlayer.items[oGameCont.select, 0] == 11) {
-		var shootTarget = collision_point(mouse_x, mouse_y, oMonster, 0, 1);
+		var shootTarget = collision_rectangle((mouse_x div 8)*8, (mouse_y div 8)*8, (mouse_x div 8)*8 + 7, (mouse_y div 8)*8 + 7, oMonster, 1, 0);
 		if(shootTarget) {
 			if(!instance_exists(oBorder)) {
 				instance_create_depth(shootTarget.x, shootTarget.y, -30, oBorder);

@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 3,
   "conversionMode": 0,
-  "duration": 65.0449,
+  "duration": 64.02612,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "musNight.mp3",
   "type": 0,
-  "volume": 0.88,
+  "volume": 1.0,
 }

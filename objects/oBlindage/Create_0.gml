@@ -10,4 +10,4 @@ audio_play_sound(sndUse, 10, false);
 gridX = x div 8;
 gridY = y div 8;
 corner = false;
-hp = 4;
+hp = 8;
