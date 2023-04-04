@@ -7,7 +7,24 @@ for(var row = 0; row < room_width div 8; row++) {
 gridX = x div 8;
 gridY = y div 8;
 
-hp = 2;
+type = 0;// type = 0/1/2
+
+// If after rainy
+if(oGameCont.day >= 2) {
+	if(irandom(8) > 6) {
+		type += 1;	
+	}
+}
+
+if(!type) {
+	hp = 2;
+} else {
+	hp = 1;	
+}
+
+if(type == 1) {
+	sprite_index = sMonster2;	
+}
 
 angle = 0;
 attackTimer = 0;

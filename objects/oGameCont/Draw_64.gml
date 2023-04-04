@@ -4,8 +4,6 @@ shader_set_uniform_f(uTime, time*((3.14/400)));
 draw_surface(application_surface, 0, 0);
 shader_reset();
 
-draw_text(0, 0, craftListMax);
-
 if(oPlayer.hp > 0) {
 
 	FontSet("small");
@@ -19,7 +17,7 @@ if(oPlayer.hp > 0) {
 		draw_set_color(c_white);
 		draw_text(20, room_height - 20, JsonGetValue("hitpoint") + " " + string(oPlayer.hp) + "/" + string(oPlayer.hpMax));
 		if(day mod 1 != 0) {
-			draw_set_color(c_yellow);	
+			draw_set_color(c_red);	
 		}
 		draw_text(80, room_height - 20, JsonGetValue("time") + " " + string(time));
 		draw_set_color(c_white);
@@ -65,7 +63,7 @@ if(oPlayer.hp > 0) {
 		draw_set_color(c_white);
 		draw_text(20, room_height - 20, JsonGetValue("hitpoint") + " " + string(oPlayer.hp) + "/" + string(oPlayer.hpMax));
 		if(day mod 1 != 0) {
-			draw_set_color(c_yellow);	
+			draw_set_color(c_red);	
 		}
 		draw_text(80, room_height - 20, JsonGetValue("time") + " " + string(time));
 		draw_set_color(c_white);

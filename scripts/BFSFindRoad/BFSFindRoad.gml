@@ -68,6 +68,9 @@ function BFSFindRoad(_grid, _gridMaxX, _gridMaxY, _selfX, _selfY, _positionX, _p
 		upValue = 999999;
 		downValue = 999999;
 		var finalValue = 999999;
+		with(oMonster) {
+			_grid[gridX, gridY] = -1;	
+		}
 		//LEFT
 		if(selfX > 0) {
 			leftValue = _grid[selfX - 1, selfY];
