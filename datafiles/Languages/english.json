@@ -49,5 +49,7 @@
     "message_box_20" : "There is a Blindage",
     "message_box_21" : "This is a Monster",
     "message_box_21_1" : "This is an invisible Monster",
-    "message_box_22" : "This is you"
+    "message_box_21_2" : "This is a giant Monster",
+    "message_box_22" : "This is you",
+    "highScore" : "NEW RECORD!"
 }

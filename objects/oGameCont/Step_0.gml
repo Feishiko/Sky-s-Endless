@@ -4,8 +4,20 @@ if(oPlayer.hp > 0) {
 	var CRAFT = keyboard_check_pressed(ord("C"));
 	var USE = keyboard_check_pressed(ord("E")) || mouse_check_button_pressed(mb_left);
 	
+	//NEW HIGH SCORE
+	if(time == global.highScore && highscoreShow == 0) {
+		highscoreShow = true;	
+		audio_play_sound(sndCong, 100, false);
+	}
+	
+	floatText = lerp(floatText, highscoreShow*15, .1);
+	
+	if(floatText >= 15) {
+		highscoreShow = 2;	
+	}
+	
 	//CHANGE SELECT
-	if(!craftMode) {
+	if(!craftMode && !oPlayer.buildingMode) {
 		for(var keyNumber = 0; keyNumber < 9; keyNumber++) {
 			if(keyboard_check_pressed(ord(string(keyNumber + 1)))) {
 				audio_play_sound(sndSelectItems, 0, false);
@@ -171,39 +183,58 @@ if(oPlayer.hp > 0) {
 		}
 	}
 	//Night
-	if(day mod 1 != 0) {
-		/*if(!audio_is_playing(musNight) && !audio_is_playing(musDay)) {
-			audio_play_sound(musNight, 200, false);	
-		}*/
+	if(!instance_exists(oEclipse)) {
+		if(day mod 1 != 0) {
+			/*if(!audio_is_playing(musNight) && !audio_is_playing(musDay)) {
+				audio_play_sound(musNight, 200, false);	
+			}*/
+			if(!instance_exists(oNight)) {
+				instance_create_depth(0, 0, -40, oNight);	
+			}
+		} else {
+			/*if(!audio_is_playing(musDay) && !audio_is_playing(musNight)) {
+				audio_play_sound(musDay, 200, false);	
+			}*/
+			if(instance_exists(oNight)) {
+				instance_destroy(oNight);		
+			}
+		}
+	} else {
+		//MusicPlay(musDay3);
 		if(!instance_exists(oNight)) {
 			instance_create_depth(0, 0, -40, oNight);	
 		}
-	}else {
-		/*if(!audio_is_playing(musDay) && !audio_is_playing(musNight)) {
-			audio_play_sound(musDay, 200, false);	
-		}*/
-		if(instance_exists(oNight)) {
-			instance_destroy(oNight);		
-		}
 	}
 	if(instance_exists(oNight)) {
-		if(day mod 6 <= 2) {
+		if(day mod 5 <= 2) {
 			MusicPlay(musNight);	
-		} else if(day mod 6 > 2 && day mod 6 <= 4) {
+		} else if(day mod 5 > 2 && day mod 5 <= 4) {
 			MusicPlay(musNight2);
 		}
 	}else {
-		if(day mod 6 < 2) {
+		if(day mod 5 < 2) {
 			MusicPlay(musDay);	
-		} else if(day mod 6 >= 2 && day mod 6 < 4) {
+		} else if(day mod 5 >= 2 && day mod 5 < 4) {
 			MusicPlay(musDay2);	
 		}
 	}
 	
 	//Rainy
-	if(day mod 6 >= 2 && day mod 6 < 4) {
+	if(day mod 5 >= 2 && day mod 5 < 4) {
 		if(!instance_exists(oRain)) {
 			instance_create_depth(0, 0, -100, oRain);	
+		}
+	}
+	
+	//Eclipse
+	if(day mod 5 >= 4 && day mod 5 < 5) {
+		MusicPlay(musDay3);	
+		if(!instance_exists(oEclipse)) {
+			instance_create_depth(0, 0, -200, oEclipse);	
+		}
+	} else {
+		if(instance_exists(oEclipse)) {
+			instance_destroy(oEclipse);	
 		}
 	}
 	
@@ -254,10 +285,19 @@ if(oPlayer.hp > 0) {
 			oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21") + "(" + string(hp) + "/2)";	
 		} else if(type == 1) {
 			oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21_1") + "(" + string(hp) + "/1)";	
+		} else if(type == 2) {
+			oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_21_2") + "(" + string(hp) + "/4)";	
 		}
 	}
 
 	with(oPlayer) {
 		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_22");
+	}
+} else {
+	if(!highscoreStorage) {
+		var file = file_text_open_write("highScore");
+		file_text_write_real(file, time);
+		file_text_close(file);
+		highscoreStorage = true;	
 	}
 }

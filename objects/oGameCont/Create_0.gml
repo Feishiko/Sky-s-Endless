@@ -37,8 +37,15 @@ craftListMax = 6;//CraftList's Max list
 
 time = 0;//Per turn per time
 
+highscoreShow = false;//Congrats player if they break their record
+
+highscoreStorage = false;//Save the file
+
+floatText = 0;//Animation of highscore
+
 depth = -100//Depth
 
 uTime = shader_get_uniform(shNight, "u_time");
+uDistortTime = shader_get_uniform(shDistort, "u_time");
 
 day = 0;//per 200 per day, per 200 per night

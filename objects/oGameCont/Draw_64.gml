@@ -1,8 +1,22 @@
 //Environment
-shader_set(shNight);
-shader_set_uniform_f(uTime, time*((3.14/400)));
-draw_surface(application_surface, 0, 0);
-shader_reset();
+if(instance_exists(oEclipse)) {
+	if(oEclipse.eclipse) {
+		shader_set(shDistort);
+		shader_set_uniform_f(uDistortTime, current_time);
+		draw_surface(application_surface, 0, 0);
+		shader_reset();	
+	} else {
+		shader_set(shNight);
+		shader_set_uniform_f(uTime, time*((3.14/400)));
+		draw_surface(application_surface, 0, 0);
+		shader_reset();		
+	}
+} else {
+	shader_set(shNight);
+	shader_set_uniform_f(uTime, time*((3.14/400)));
+	draw_surface(application_surface, 0, 0);
+	shader_reset();	
+}
 
 if(oPlayer.hp > 0) {
 
@@ -19,7 +33,14 @@ if(oPlayer.hp > 0) {
 		if(day mod 1 != 0) {
 			draw_set_color(c_red);	
 		}
+		if(instance_exists(oEclipse)) {
+			draw_set_color(c_red);	
+		}
 		draw_text(80, room_height - 20, JsonGetValue("time") + " " + string(time));
+		if(highscoreShow == 1) {
+			draw_set_color(c_yellow);
+			draw_text(80, room_height - 20 - floatText, JsonGetValue("highScore"));	
+		}
 		draw_set_color(c_white);
 		draw_text(120, room_height - 20, string(messageBox[clamp(mouse_x div 8, 0, (room_width div 8) - 1), clamp(mouse_y div 8, 0, (room_height div 8) - 1)]));
 		draw_set_color(c_black);
@@ -65,7 +86,14 @@ if(oPlayer.hp > 0) {
 		if(day mod 1 != 0) {
 			draw_set_color(c_red);	
 		}
+		if(instance_exists(oEclipse)) {
+			draw_set_color(c_red);	
+		}
 		draw_text(80, room_height - 20, JsonGetValue("time") + " " + string(time));
+		if(highscoreShow == 1) {
+			draw_set_color(c_yellow);
+			draw_text(80, room_height - 20 - floatText, JsonGetValue("highScore"));	
+		}
 		draw_set_color(c_white);
 		draw_text(120, room_height - 20, string(messageBox[clamp(mouse_x div 8, 0, (room_width div 8) - 1), clamp(mouse_y div 8, 0, (room_height div 8) - 1)]));
 		draw_set_color(c_black);

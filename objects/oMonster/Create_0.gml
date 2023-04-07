@@ -16,14 +16,28 @@ if(oGameCont.day >= 2) {
 	}
 }
 
-if(!type) {
+if(oGameCont.day >= 4) {
+	if(type == 0) {
+		if(irandom(8) > 6) {
+			type = 2;	
+		}
+	}
+}
+
+if(type == 0) {
 	hp = 2;
-} else {
+} else if(type == 1) {
 	hp = 1;	
+} else if(type == 2) {
+	hp = 4;	
 }
 
 if(type == 1) {
 	sprite_index = sMonster2;	
+}
+
+if(type == 2) {
+	sprite_index = sMonster3;	
 }
 
 angle = 0;

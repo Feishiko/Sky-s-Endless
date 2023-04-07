@@ -10,6 +10,12 @@ if(hp > 0) {
 	}
 }	
 
+if(preHP != hp) {
+	preHP = hp;
+	image_xscale = 0;
+	image_yscale = 0;
+}
+
 //Corner
 var left = collision_point(x - 8, y, oBlindage, 1, 1);
 var right = collision_point(x + 8, y, oBlindage, 1, 1);

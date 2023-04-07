@@ -11,3 +11,4 @@ gridX = x div 8;
 gridY = y div 8;
 corner = false;
 hp = 8;
+preHP = hp;

@@ -49,5 +49,7 @@
     "message_box_20" : "这是一个掩体",
     "message_box_21" : "这是一头怪兽",
     "message_box_21_1" : "这是一头隐身怪兽",
-    "message_box_22" : "这是你"
+    "message_box_21_2" : "这是一头巨型怪兽",
+    "message_box_22" : "这是你",
+    "highScore" : "新记录！"
 }
