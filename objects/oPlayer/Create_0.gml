@@ -20,3 +20,6 @@ deathTimer = 0;
 ItemPick(0, 2);
 ItemPick(2, 2);
 ItemPick(4, 2);
+ItemPick(1, 20);
+ItemPick(3, 20);
+ItemPick(5, 20);

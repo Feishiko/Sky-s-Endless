@@ -178,8 +178,10 @@ if(oPlayer.hp > 0) {
 					image_yscale = .5;
 				}
 			}
-		}else {
-			instance_destroy(oBorder);	
+		} else {
+			with(oBorder) {
+				instance_destroy();	
+			}
 		}
 	}
 	//Night
@@ -206,28 +208,28 @@ if(oPlayer.hp > 0) {
 		}
 	}
 	if(instance_exists(oNight)) {
-		if(day mod 5 <= 2) {
+		if(day mod 6 <= 2) {
 			MusicPlay(musNight);	
-		} else if(day mod 5 > 2 && day mod 5 <= 4) {
+		} else if(day mod 6 >= 2 && day mod 6 < 4) {
 			MusicPlay(musNight2);
 		}
 	}else {
-		if(day mod 5 < 2) {
+		if(day mod 6 < 2) {
 			MusicPlay(musDay);	
-		} else if(day mod 5 >= 2 && day mod 5 < 4) {
+		} else if(day mod 6 >= 2 && day mod 6 < 4) {
 			MusicPlay(musDay2);	
 		}
 	}
 	
 	//Rainy
-	if(day mod 5 >= 2 && day mod 5 < 4) {
+	if(day mod 6 >= 2 && day mod 6 < 4) {
 		if(!instance_exists(oRain)) {
 			instance_create_depth(0, 0, -100, oRain);	
 		}
 	}
 	
 	//Eclipse
-	if(day mod 5 >= 4 && day mod 5 < 5) {
+	if(day mod 6 >= 4 && day mod 6 < 6) {
 		MusicPlay(musDay3);	
 		if(!instance_exists(oEclipse)) {
 			instance_create_depth(0, 0, -200, oEclipse);	
@@ -294,7 +296,7 @@ if(oPlayer.hp > 0) {
 		oGameCont.messageBox[gridX, gridY] = JsonGetValue("message_box_22");
 	}
 } else {
-	if(!highscoreStorage) {
+	if(!highscoreStorage && time > global.highScore) {
 		var file = file_text_open_write("highScore");
 		file_text_write_real(file, time);
 		file_text_close(file);

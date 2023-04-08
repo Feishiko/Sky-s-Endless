@@ -1,3 +1,4 @@
+//draw_text(0, 0, "day " + string(day));
 //Environment
 if(instance_exists(oEclipse)) {
 	if(oEclipse.eclipse) {

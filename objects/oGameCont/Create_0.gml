@@ -33,6 +33,10 @@ shift[0] = -1;//ItemID
 shift[1] = -1;//ItemNumber
 shift[2] = -1;//ItemPosition
 
+monsterKilled[0] = 0;//FirstType
+monsterKilled[1] = 0;//SecondType
+monsterKilled[2] = 0;//ThirdType
+
 craftListMax = 6;//CraftList's Max list
 
 time = 0;//Per turn per time

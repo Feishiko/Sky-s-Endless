@@ -30,6 +30,7 @@
   },
   "resources": [
     {"id":{"name":"oHelp","path":"objects/oHelp/oHelp.yy",},},
+    {"id":{"name":"oOuttoGame","path":"objects/oOuttoGame/oOuttoGame.yy",},},
     {"id":{"name":"sndMake","path":"sounds/sndMake/sndMake.yy",},},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
     {"id":{"name":"sndHurt","path":"sounds/sndHurt/sndHurt.yy",},},
@@ -51,6 +52,7 @@
     {"id":{"name":"musDay2","path":"sounds/musDay2/musDay2.yy",},},
     {"id":{"name":"shTurnWhite","path":"shaders/shTurnWhite/shTurnWhite.yy",},},
     {"id":{"name":"oRain","path":"objects/oRain/oRain.yy",},},
+    {"id":{"name":"sndButton","path":"sounds/sndButton/sndButton.yy",},},
     {"id":{"name":"Light","path":"scripts/Light/Light.yy",},},
     {"id":{"name":"Brick","path":"scripts/Brick/Brick.yy",},},
     {"id":{"name":"oBlindage","path":"objects/oBlindage/oBlindage.yy",},},
@@ -63,6 +65,7 @@
     {"id":{"name":"ItemPick","path":"scripts/ItemPick/ItemPick.yy",},},
     {"id":{"name":"musDay","path":"sounds/musDay/musDay.yy",},},
     {"id":{"name":"sTiles","path":"sprites/sTiles/sTiles.yy",},},
+    {"id":{"name":"oIntoGame","path":"objects/oIntoGame/oIntoGame.yy",},},
     {"id":{"name":"oBlood","path":"objects/oBlood/oBlood.yy",},},
     {"id":{"name":"MusicPlay","path":"scripts/MusicPlay/MusicPlay.yy",},},
     {"id":{"name":"JsonGetValue","path":"scripts/JsonGetValue/JsonGetValue.yy",},},

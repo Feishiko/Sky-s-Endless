@@ -2,6 +2,7 @@
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
     {"name":"oHelp","order":6,"path":"objects/oHelp/oHelp.yy",},
+    {"name":"oOuttoGame","order":23,"path":"objects/oOuttoGame/oOuttoGame.yy",},
     {"name":"sndMake","order":6,"path":"sounds/sndMake/sndMake.yy",},
     {"name":"sndHurt","order":8,"path":"sounds/sndHurt/sndHurt.yy",},
     {"name":"ItemUse","order":2,"path":"scripts/ItemUse/ItemUse.yy",},
@@ -21,6 +22,7 @@
     {"name":"sndToss","order":1,"path":"sounds/sndToss/sndToss.yy",},
     {"name":"musDay2","order":14,"path":"sounds/musDay2/musDay2.yy",},
     {"name":"oRain","order":18,"path":"objects/oRain/oRain.yy",},
+    {"name":"sndButton","order":17,"path":"sounds/sndButton/sndButton.yy",},
     {"name":"Light","order":13,"path":"scripts/Light/Light.yy",},
     {"name":"Brick","order":12,"path":"scripts/Brick/Brick.yy",},
     {"name":"oBlindage","order":10,"path":"objects/oBlindage/oBlindage.yy",},
@@ -32,6 +34,7 @@
     {"name":"ItemPick","order":4,"path":"scripts/ItemPick/ItemPick.yy",},
     {"name":"musDay","order":10,"path":"sounds/musDay/musDay.yy",},
     {"name":"sTiles","order":4,"path":"sprites/sTiles/sTiles.yy",},
+    {"name":"oIntoGame","order":22,"path":"objects/oIntoGame/oIntoGame.yy",},
     {"name":"oBlood","order":12,"path":"objects/oBlood/oBlood.yy",},
     {"name":"MusicPlay","order":16,"path":"scripts/MusicPlay/MusicPlay.yy",},
     {"name":"JsonGetValue","order":14,"path":"scripts/JsonGetValue/JsonGetValue.yy",},

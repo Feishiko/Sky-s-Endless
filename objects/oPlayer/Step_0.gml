@@ -195,14 +195,13 @@ if(hp > 0) {
 } else {
 	sprite_index = sPlayerDead;
 	deathTimer++;
-	if(audio_is_playing(musDay)) {
-		audio_stop_sound(musDay);	
-	}
-	if(audio_is_playing(musNight)) {
-		audio_stop_sound(musNight);	
-	}
+	audio_emitter_gain(global.Emitter, 0);
 	if(deathTimer >= 180) {
 		oDeath.day = oGameCont.day;
+		oDeath.time = oGameCont.time;
+		oDeath.monsterKilled[0] = oGameCont.monsterKilled[0];//FirstType
+		oDeath.monsterKilled[1] = oGameCont.monsterKilled[1];//SecondType
+		oDeath.monsterKilled[2] = oGameCont.monsterKilled[2];//ThirdType
 		room_goto(rmDeath);	
 	}
 	if(instance_exists(oHelp)){
