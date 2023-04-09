@@ -10,6 +10,7 @@
     {"name":"sBorder","order":8,"path":"sprites/sBorder/sBorder.yy",},
     {"name":"shRain","order":2,"path":"shaders/shRain/shRain.yy",},
     {"name":"shNight","order":1,"path":"shaders/shNight/shNight.yy",},
+    {"name":"sndCount","order":18,"path":"sounds/sndCount/sndCount.yy",},
     {"name":"sndGrenade","order":4,"path":"sounds/sndGrenade/sndGrenade.yy",},
     {"name":"oRainDot","order":19,"path":"objects/oRainDot/oRainDot.yy",},
     {"name":"fontPixelMenuChs","order":2,"path":"fonts/fontPixelMenuChs/fontPixelMenuChs.yy",},

@@ -208,28 +208,28 @@ if(oPlayer.hp > 0) {
 		}
 	}
 	if(instance_exists(oNight)) {
-		if(day mod 6 <= 2) {
+		if(day mod 5 <= 2) {
 			MusicPlay(musNight);	
-		} else if(day mod 6 >= 2 && day mod 6 < 4) {
+		} else if(day mod 5 >= 2 && day mod 5 < 4) {
 			MusicPlay(musNight2);
 		}
 	}else {
-		if(day mod 6 < 2) {
+		if(day mod 5 < 2) {
 			MusicPlay(musDay);	
-		} else if(day mod 6 >= 2 && day mod 6 < 4) {
+		} else if(day mod 5 >= 2 && day mod 5 < 4) {
 			MusicPlay(musDay2);	
 		}
 	}
 	
 	//Rainy
-	if(day mod 6 >= 2 && day mod 6 < 4) {
+	if(day mod 5 >= 2 && day mod 5 < 4) {
 		if(!instance_exists(oRain)) {
 			instance_create_depth(0, 0, -100, oRain);	
 		}
 	}
 	
 	//Eclipse
-	if(day mod 6 >= 4 && day mod 6 < 6) {
+	if(day mod 5 >= 4 && day mod 5 < 5) {
 		MusicPlay(musDay3);	
 		if(!instance_exists(oEclipse)) {
 			instance_create_depth(0, 0, -200, oEclipse);	
@@ -279,7 +279,7 @@ if(oPlayer.hp > 0) {
 	}
 
 	with(oBlindage) {
-		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/8)";	
+		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/4)";	
 	}
 
 	with(oMonster) {

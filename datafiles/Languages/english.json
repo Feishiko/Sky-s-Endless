@@ -51,5 +51,10 @@
     "message_box_21_1" : "This is an invisible Monster",
     "message_box_21_2" : "This is a giant Monster",
     "message_box_22" : "This is you",
-    "highScore" : "NEW RECORD!"
+    "highScore" : "NEW RECORD!",
+    "you_lived" : "You lived ",
+    "turns" : " turns",
+    "day" : " day",
+    "days" : " days",
+    "you_killed" : "You killed "
 }

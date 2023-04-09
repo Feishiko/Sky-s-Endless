@@ -51,5 +51,10 @@
     "message_box_21_1" : "这是一头隐身怪兽",
     "message_box_21_2" : "这是一头巨型怪兽",
     "message_box_22" : "这是你",
-    "highScore" : "新记录！"
+    "highScore" : "新记录！",
+    "you_lived" : "你活了",
+    "turns" : "回合",
+    "day" : "天",
+    "days" : "天",
+    "you_killed" : "你杀了"
 }
