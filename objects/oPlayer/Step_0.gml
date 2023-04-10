@@ -45,7 +45,7 @@ if(hp > 0) {
 		var picks = collision_point(x, y, oItem, 1, 1);
 		if(picks) {
 			TimePassed();
-			ItemPick(picks.itemID, picks.number);
+			ItemPick(picks.itemID, picks.number, picks.doubled, picks.explode, picks.faster);
 			instance_destroy(picks);
 		}
 		var harvests = collision_point(x, y, oTile, 1, 1);
@@ -190,6 +190,9 @@ if(hp > 0) {
 	for(var itemsNumber = 0; itemsNumber < 10; itemsNumber++) {
 		if(items[itemsNumber, 1] <= 0 && items[itemsNumber, 0] != -1) {
 			items[itemsNumber, 0] = -1;	
+			items[itemsNumber, 2] = false;	
+			items[itemsNumber, 3] = false;	
+			items[itemsNumber, 4] = false;	
 		}
 	}
 } else {

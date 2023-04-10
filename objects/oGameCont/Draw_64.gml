@@ -1,4 +1,9 @@
 //draw_text(0, 0, "day " + string(day));
+/*
+draw_text(0, 0, "doubled: " + string(oPlayer.items[6, 2]));
+draw_text(0, 20, "explode: " + string(oPlayer.items[6, 3]));
+draw_text(0, 40, "faster: " + string(oPlayer.items[6, 4]));
+*/
 //Environment
 if(instance_exists(oEclipse)) {
 	if(oEclipse.eclipse) {
@@ -53,6 +58,14 @@ if(oPlayer.hp > 0) {
 			}
 			draw_text(30, 20 + itemsNumber * 10, ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))
 			shader_reset();
+			// Some Tags Icons
+			var tagNumber = 0;
+			for(var i = 0; i <= 2; i++) {
+				if(oPlayer.items[itemsNumber, 2 + i]) {
+					draw_sprite(sIcon, i, tagNumber*9 + 31 + string_width(string(ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))), 20 + itemsNumber * 10)		
+					tagNumber++;
+				}	
+			}
 			draw_set_color(c_black);
 		}
 		//Craft Mode
@@ -112,6 +125,14 @@ if(oPlayer.hp > 0) {
 			}
 			draw_text(30, 20 + itemsNumber * 14, ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))
 			shader_reset();
+			// Some Tags Icons
+			var tagNumber = 0;
+			for(var i = 0; i <= 2; i++) {
+				if(oPlayer.items[itemsNumber, 2 + i]) {
+					draw_sprite(sIcon, i, tagNumber*9 + 31 + string_width(string(ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))), 22 + itemsNumber * 14)		
+					tagNumber++;
+				}	
+			}
 			draw_set_color(c_black);
 		}
 		//Craft Mode

@@ -44,6 +44,9 @@ if(oPlayer.hp > 0) {
 			shift[0] = oPlayer.items[select, 0];//ItemID
 			shift[1] = oPlayer.items[select, 1];//ItemNumber
 			shift[2] = select;//ItemPosition
+			shift[3] = oPlayer.items[select, 2];//Doubled
+			shift[4] = oPlayer.items[select, 3];//Explode
+			shift[5] = oPlayer.items[select, 4];//Faster
 		}
 
 		if(keyboard_check(vk_shift)) {
@@ -59,12 +62,21 @@ if(oPlayer.hp > 0) {
 	
 			if(shift[2] != select) {
 				oPlayer.items[shift[2], 0] = oPlayer.items[select, 0];	
-				oPlayer.items[shift[2], 1] = oPlayer.items[select, 1];	
+				oPlayer.items[shift[2], 1] = oPlayer.items[select, 1];
+				oPlayer.items[shift[2], 2] = oPlayer.items[select, 2];	
+				oPlayer.items[shift[2], 3] = oPlayer.items[select, 3];
+				oPlayer.items[shift[2], 4] = oPlayer.items[select, 4];
 				oPlayer.items[select, 0] = shift[0];
 				oPlayer.items[select, 1] = shift[1];
+				oPlayer.items[select, 2] = shift[3];
+				oPlayer.items[select, 3] = shift[4];
+				oPlayer.items[select, 4] = shift[5];
 				shift[0] = oPlayer.items[select, 0];//ItemID
 				shift[1] = oPlayer.items[select, 1];//ItemNumber
 				shift[2] = select;//ItemPosition
+				shift[3] = oPlayer.items[select, 2];//Doubled
+				shift[4] = oPlayer.items[select, 3];//Explode
+				shift[5] = oPlayer.items[select, 4];//Faster
 			}
 		}
 	}

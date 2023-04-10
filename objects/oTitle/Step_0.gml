@@ -1,0 +1,1 @@
+y = sin(current_time/1000)*3;

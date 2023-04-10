@@ -60,7 +60,7 @@ if(room = rmDeath) {
 			showTimer++;
 		}
 		draw_text(room_width/2, 120, JsonGetValue("you_killed") + string(monsterKilledNow[0]));
-		draw_sprite_ext(sMonster, -1, room_width/2 + string_length(JsonGetValue("you_killed") + string(monsterKilledNow[0])) + 70, 120, 4, 4, 0, c_white, 1);
+		draw_sprite_ext(sMonster, -1, room_width/2 + string_width(JsonGetValue("you_killed") + string(monsterKilledNow[0]))/2 + 20, 120, 4, 4, 0, c_white, 1);
 	}
 	if(showTimer >= 480) {
 		if(monsterKilledNow[1] < monsterKilled[1]) {
@@ -77,7 +77,7 @@ if(room = rmDeath) {
 			showTimer++;
 		}
 		draw_text(room_width/2, 160, JsonGetValue("you_killed") + string(monsterKilledNow[1]));
-		draw_sprite_ext(sMonster2, -1, room_width/2 + string_length(JsonGetValue("you_killed") + string(monsterKilledNow[1])) + 70, 160, 4, 4, 0, c_white, 1);
+		draw_sprite_ext(sMonster2, -1, room_width/2 + string_width(JsonGetValue("you_killed") + string(monsterKilledNow[1]))/2 + 20, 160, 4, 4, 0, c_white, 1);
 	}
 	if(showTimer >= 600) {
 		if(monsterKilledNow[2] < monsterKilled[2]) {
@@ -95,6 +95,6 @@ if(room = rmDeath) {
 			}
 		}
 		draw_text(room_width/2, 200, JsonGetValue("you_killed") + string(monsterKilledNow[2]));
-		draw_sprite_ext(sMonster3, -1, room_width/2 + string_length(JsonGetValue("you_killed") + string(monsterKilledNow[2])) + 70, 200, 4, 4, 0, c_white, 1);
+		draw_sprite_ext(sMonster3, -1, room_width/2 + string_width(JsonGetValue("you_killed") + string(monsterKilledNow[2]))/2 + 20, 200, 4, 4, 0, c_white, 1);
 	}
 }

@@ -112,11 +112,19 @@ function ItemUse(_sequence) {
 		oPlayer.hp *= 2;
 		oPlayer.hpMax *= 2;
 		oPlayer.items[_sequence, 1] -= 1;
+		repeat(20) {
+			instance_create_depth(x, y, -20, oPotionPartical);	
+		}
+		PotionWord(JsonGetValue("potion_word_1"));
 	}
 	
 	if(oPlayer.items[_sequence, 0] == 13) {
 		audio_play_sound(sndGrenade, 100, false);
+		PotionWord(JsonGetValue("potion_word_2"));
 		Light(15);
+		repeat(20) {
+			instance_create_depth(x, y, -20, oPotionPartical);	
+		}
 		with(oMonster) {
 			Brick(x, y);
 			hp -= 4;	
@@ -125,6 +133,10 @@ function ItemUse(_sequence) {
 	}
 	
 	if(oPlayer.items[_sequence, 0] == 14) {
+		PotionWord(JsonGetValue("potion_word_3"));
+		repeat(20) {
+			instance_create_depth(x, y, -20, oPotionPartical);	
+		}
 		oPlayer.spd += 1;
 		oPlayer.items[_sequence, 1] -= 1;
 	}

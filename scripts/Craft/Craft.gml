@@ -14,6 +14,7 @@ function Craft(_itemID, _number){
 	if(_itemID != 12){
 		ItemPick(_itemID, _number);
 	} else {
-		ItemPick(_itemID + irandom(2), _number);	
+		var rand = irandom(2);
+		ItemPick(_itemID + rand, _number, rand == 0, rand == 1, rand == 2);	
 	}
 }

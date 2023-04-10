@@ -1,0 +1,11 @@
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+draw_set_color(c_black);
+draw_set_alpha(alpha);
+shader_set(shRainbow);
+shader_set_uniform_f(uTime, current_time);
+draw_text(room_width/2 + cos(current_time/1000)*5, room_height/2 + sin(current_time/1000)*5, string(word));
+shader_reset();
+draw_set_alpha(1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

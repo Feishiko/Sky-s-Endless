@@ -63,5 +63,8 @@
     "turns" : "回合",
     "day" : "天",
     "days" : "天",
-    "you_killed" : "你杀了"
+    "you_killed" : "你杀了",
+    "potion_word_1" : "你被赋予了新的天赋 --- 双倍生命",
+    "potion_word_2" : "你被赋予了新的天赋 --- 清除所有怪兽",
+    "potion_word_3" : "你被赋予了新的天赋 --- 变得更快"
 }

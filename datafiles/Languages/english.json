@@ -63,5 +63,8 @@
     "turns" : " turns",
     "day" : " day",
     "days" : " days",
-    "you_killed" : "You killed "
+    "you_killed" : "You killed ",
+    "potion_word_1" : "You gain a new talent about Double Hitpoint",
+    "potion_word_2" : "You gain a new talent about Explode all Monster",
+    "potion_word_3" : "You gain a new talent about More Faster"
 }
