@@ -16,5 +16,8 @@ function ItemGetName(itemID, _sequence){
 		case 9: draw_set_color(c_navy);return JsonGetValue("item_9") + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 10: draw_set_color(c_orange);return JsonGetValue("item_10") + "x" + string(oPlayer.items[_sequence, 1]);break;
 		case 11: draw_set_color(c_maroon);return JsonGetValue("item_11") + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 12: draw_set_color(c_white);return JsonGetValue("item_12") + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 13: draw_set_color(c_white);return JsonGetValue("item_13") + "x" + string(oPlayer.items[_sequence, 1]);break;
+		case 14: draw_set_color(c_white);return JsonGetValue("item_14") + "x" + string(oPlayer.items[_sequence, 1]);break;
 	}
 }

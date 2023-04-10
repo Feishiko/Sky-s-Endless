@@ -8,7 +8,7 @@ if(weaponType == 0) {
 
 if(weaponType == 1) {
 	with(other) {
-		hp -= 2;
+		hp -= 1;
 		Brick(x, y);
 	}
 	instance_destroy();

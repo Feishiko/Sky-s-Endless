@@ -8,7 +8,12 @@ function Craft(_itemID, _number){
 		case 9: ItemDelete(1, 4);break;
 		case 10: ItemDelete(0, 2);ItemDelete(2, 2);ItemDelete(4, 2);ItemDelete(1, 4);break;
 		case 11: ItemDelete(3, 1);ItemDelete(5, 4);break;
+		case 12: ItemDelete(0, 100);ItemDelete(2, 100);ItemDelete(4, 100);ItemDelete(1, 150);break;
 	}
 	audio_play_sound(sndMake, 40, false);
-	ItemPick(_itemID, _number);
+	if(_itemID != 12){
+		ItemPick(_itemID, _number);
+	} else {
+		ItemPick(_itemID + irandom(2), _number);	
+	}
 }

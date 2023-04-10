@@ -107,4 +107,25 @@ function ItemUse(_sequence) {
 			oPlayer.hp += 1;	
 		}
 	}
+	
+	if(oPlayer.items[_sequence, 0] == 12) {
+		oPlayer.hp *= 2;
+		oPlayer.hpMax *= 2;
+		oPlayer.items[_sequence, 1] -= 1;
+	}
+	
+	if(oPlayer.items[_sequence, 0] == 13) {
+		audio_play_sound(sndGrenade, 100, false);
+		Light(15);
+		with(oMonster) {
+			Brick(x, y);
+			hp -= 4;	
+		}
+		oPlayer.items[_sequence, 1] -= 1;
+	}
+	
+	if(oPlayer.items[_sequence, 0] == 14) {
+		oPlayer.spd += 1;
+		oPlayer.items[_sequence, 1] -= 1;
+	}
 }

@@ -47,14 +47,19 @@ if(oPlayer.hp > 0) {
 		draw_set_color(c_black);
 		for(var itemsNumber = 0; itemsNumber < 10; itemsNumber++) {
 			draw_text(20, 20 + itemsNumber * 10, string(itemsNumber + 1) + ".");
+			if(oPlayer.items[itemsNumber, 0] >= 12 && oPlayer.items[itemsNumber, 0] <= 14) {
+				shader_set(shRainbow);
+				shader_set_uniform_f(uRainbowTime, current_time);
+			}
 			draw_text(30, 20 + itemsNumber * 10, ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))
+			shader_reset();
 			draw_set_color(c_black);
 		}
 		//Craft Mode
 		if(craftMode) {
 			draw_rectangle_color(89, 20 + craftSelect * 10, room_width, 20 + craftSelect * 10 + 6, c_black, c_black, c_black, c_black, false);
 			draw_set_color(c_white);
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				switch(craftList[sequence]) {
 					case 6: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_1"));break;
 					case 7: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_2"));break;
@@ -62,13 +67,14 @@ if(oPlayer.hp > 0) {
 					case 9: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_4"));break;
 					case 10: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_5"));break;
 					case 11: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_6"));break;
+					case 12: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_7"));break;
 					default: draw_text(90, 20 + sequence * 10, "");break;
 				}
 			}
 			// Can't be created(English ver)
 			draw_set_color(c_red);
 			var _seq = 0;
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				if(!CraftListExists(6 + sequence)) {
 					draw_text(90, 20 + craftListMax * 10 + _seq * 10, JsonGetValue("craft_list_" + string(sequence + 1)));
 					_seq += 1
@@ -100,14 +106,19 @@ if(oPlayer.hp > 0) {
 		draw_set_color(c_black);
 		for(var itemsNumber = 0; itemsNumber < 10; itemsNumber++) {
 			draw_text(20, 20 + itemsNumber * 14, string(itemsNumber + 1) + ".");
+			if(oPlayer.items[itemsNumber, 0] >= 12 && oPlayer.items[itemsNumber, 0] <= 14) {
+				shader_set(shRainbow);
+				shader_set_uniform_f(uRainbowTime, current_time);
+			}
 			draw_text(30, 20 + itemsNumber * 14, ItemGetName(oPlayer.items[itemsNumber, 0], itemsNumber))
+			shader_reset();
 			draw_set_color(c_black);
 		}
 		//Craft Mode
 		if(craftMode) {
 			draw_rectangle_color(89, 20 + craftSelect * 14, room_width, 20 + craftSelect * 14 + 10, c_black, c_black, c_black, c_black, false);
 			draw_set_color(c_white);
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				switch(craftList[sequence]) {
 					case 6: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_1"));break;
 					case 7: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_2"));break;
@@ -115,13 +126,14 @@ if(oPlayer.hp > 0) {
 					case 9: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_4"));break;
 					case 10: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_5"));break;
 					case 11: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_6"));break;
+					case 12: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_7"));break;
 					default: draw_text(90, 20 + sequence * 14, "");break;
 				}
 			}
 			// Can't be created(Chinese ver)
 			draw_set_color(c_red);
 			var _seq = 0;
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				if(!CraftListExists(6 + sequence)) {
 					draw_text(90, 20 + craftListMax * 14 + _seq * 14, JsonGetValue("craft_list_" + string(sequence + 1)));
 					_seq += 1

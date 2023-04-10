@@ -73,7 +73,7 @@ if(oPlayer.hp > 0) {
 		if(craftMode) {
 			//Init
 			craftSelect = 0;
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				craftList[sequence] = -1;	
 			}		
 			//Pistol
@@ -100,8 +100,12 @@ if(oPlayer.hp > 0) {
 			if(ItemExists(3, 1) && ItemExists(5, 2)) {
 				CraftListPush(11);	
 			}
+			//Potion
+			if(ItemExists(0, 100) && ItemExists(2, 100) && ItemExists(4, 100) && ItemExists(1, 150)) {
+				CraftListPush(12);	
+			}
 			craftListMax = 0;
-			for(var sequence = 0; sequence < 6; sequence++) {
+			for(var sequence = 0; sequence < 7; sequence++) {
 				if(craftList[sequence] != -1) {
 					craftListMax += 1;
 				}
@@ -130,6 +134,7 @@ if(oPlayer.hp > 0) {
 				case 9: Craft(9, 1);break;
 				case 10: Craft(10, 1);break;
 				case 11: Craft(11, 1);break;
+				case 12: Craft(12, 1);break;
 			}
 			TimePassed();
 			craftMode = false;
@@ -275,11 +280,14 @@ if(oPlayer.hp > 0) {
 			case 9: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_17");break; 
 			case 10: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_18");break; 
 			case 11: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_19");break; 
+			case 12: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_23");break; 
+			case 13: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_24");break; 
+			case 14: oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("there_are") + string(number) + JsonGetValue("message_box_25");break; 
 		}
 	}
 
 	with(oBlindage) {
-		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/4)";	
+		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/8)";	
 	}
 
 	with(oMonster) {

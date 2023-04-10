@@ -14,7 +14,7 @@ for(var row = 0; row < room_width div 8; row++) {
 	}
 }
 
-for(var sequence = 0; sequence < 6; sequence++) {
+for(var sequence = 0; sequence < 7; sequence++) {
 	craftList[sequence] = -1;	
 }
 
@@ -51,5 +51,6 @@ depth = -100//Depth
 
 uTime = shader_get_uniform(shNight, "u_time");
 uDistortTime = shader_get_uniform(shDistort, "u_time");
+uRainbowTime = shader_get_uniform(shRainbow, "u_time");
 
 day = 0;//per 200 per day, per 200 per night
