@@ -6,6 +6,9 @@ function ItemUse(_sequence) {
 		var harvests = collision_point(x, y, oTile, 1, 1);
 		if(harvests.tiles == 1 && !collision_point(x, y, oBlindage, 1, 1)) {
 			if(oPlayer.items[_sequence, 1] >= 1) {
+				harvests.doubled = oPlayer.items[_sequence, 2];
+				harvests.explode = oPlayer.items[_sequence, 3];
+				harvests.faster = oPlayer.items[_sequence, 4];
 				TimePassed();
 				audio_play_sound(sndUse, 10, false);
 				oPlayer.items[_sequence, 1] -= 1;	
@@ -22,13 +25,44 @@ function ItemUse(_sequence) {
 	if(oPlayer.items[_sequence, 0] == 6) {
 		if(instance_exists(oBorder)) {
 			if(ItemExists(7, 1)) {
-				ItemDelete(7, 1);
+				var item = ItemDelete(7, 1);
 				Light(2);
 				with(oBorder) {
 					weaponType = 0;//Pistol	
 				}
+				
+				if(oPlayer.items[item, 4]) {
+					with(oBorder) {
+						doubledBullet = true;	
+					}
+				} else {
+					with(oBorder) {
+						doubledBullet = false;	
+					}	
+				}
+				
+				if(oPlayer.items[item, 3]) {
+					with(oBorder) {
+						explode = true;	
+					}
+				} else {
+					with(oBorder) {
+						explode = false;	
+					}	
+				}
+				
 				audio_play_sound(sndShoot, 20, false);
-				TimePassed();
+				if(oPlayer.items[_sequence, 2]) {
+					oBorder.doubledPistol = true;	
+				}
+				if(oPlayer.items[_sequence, 3]) {
+					instance_create_depth(oPlayer.x, oPlayer.y, -20, oLightCircle);	
+				}
+				innerShootTurn += 1;
+				if(oPlayer.innerShootTurn >= 1 + oPlayer.items[_sequence, 4]) {
+					TimePassed();
+					oPlayer.innerShootTurn = 0;	
+				}
 			}
 		}
 	}
@@ -36,13 +70,27 @@ function ItemUse(_sequence) {
 	if(oPlayer.items[_sequence, 0] == 11) {
 		if(instance_exists(oBorder)) {
 			if(ItemExists(11, 1)) {
-				ItemDelete(11, 1);
+				var item = ItemDelete(11, 1);
 				Light(10);
 				with(oBorder) {
 					weaponType = 1;//Grenade	
 				}
+				if(oPlayer.items[_sequence, 2]) {
+					with(oBorder) {
+						doubledGrenade = true;	
+					}
+				}
 				audio_play_sound(sndGrenade, 30, false);
-				TimePassed();
+				if(oPlayer.items[_sequence, 3]) {
+					with(oBorder) {
+						explode = true;	
+					}
+				}
+				oPlayer.innerGrenadeTurn += 1;
+				if(oPlayer.innerGrenadeTurn >= 1 + oPlayer.items[_sequence, 4]) {
+					TimePassed();
+					oPlayer.innerGrenadeTurn = 0;	
+				}
 			}
 		}
 	}
@@ -68,6 +116,9 @@ function ItemUse(_sequence) {
 			if(space.tiles == -1) {
 				//TimePassed();
 				oPlayer.buildingMode = true;
+				oPlayer.buildingBuff[0] = oPlayer.items[_sequence, 2];
+				oPlayer.buildingBuff[1] = oPlayer.items[_sequence, 3];
+				oPlayer.buildingBuff[2] = oPlayer.items[_sequence, 4];
 				instance_create_depth(x + lenX, y + lenY, -20, oBorder);
 			}	
 		}
@@ -93,6 +144,9 @@ function ItemUse(_sequence) {
 		
 		if(oPlayer.buildingMode) {
 			oPlayer.buildingStuff = oBlindage;
+			oPlayer.buildingBuff[0] = oPlayer.items[_sequence, 2];
+			oPlayer.buildingBuff[1] = oPlayer.items[_sequence, 3];
+			oPlayer.buildingBuff[2] = oPlayer.items[_sequence, 4];
 			oPlayer.items[_sequence, 1] -= 1;
 		}
 	}
@@ -101,10 +155,18 @@ function ItemUse(_sequence) {
 	//Bread
 	if(oPlayer.items[_sequence, 0] == 9) {
 		if(oPlayer.hp < oPlayer.hpMax) {
-			//TimePassed();
+			//If faster then don't pass the turn
+			if(!oPlayer.items[_sequence, 4]) {
+				TimePassed();
+			}
 			audio_play_sound(sndUse, 10, false);
 			oPlayer.items[_sequence, 1] -= 1;
-			oPlayer.hp += 1;	
+			//If doubled then double hp regain
+			oPlayer.hp += 1 + oPlayer.items[_sequence, 2];	
+			//Explode
+			if(oPlayer.items[_sequence, 3]) {
+				instance_create_depth(x, y, -20, oLightCircle);
+			}
 		}
 	}
 	

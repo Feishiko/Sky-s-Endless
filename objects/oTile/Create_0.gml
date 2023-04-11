@@ -5,5 +5,13 @@ column = -1;
 
 shineTimer = 0;
 
+doubled = false;
+explode = false;
+faster = false;
+
+foreverDoubled = false;
+foreverExplode = false;
+foreverFaster = false;
+
 growth = 0;
 growthTo = 0;

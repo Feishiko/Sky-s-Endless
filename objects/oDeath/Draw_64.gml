@@ -42,7 +42,7 @@ if(room = rmDeath) {
 				dayNow = day;	
 				showTimer++;
 			}
-			draw_text(room_width/2, 80, JsonGetValue("you_lived") + string(floor(day)) + JsonGetValue("days"));
+			draw_text(room_width/2, 80, JsonGetValue("you_lived") + string(floor(dayNow)) + JsonGetValue("days"));
 		}
 	}
 	if(showTimer >= 360) {

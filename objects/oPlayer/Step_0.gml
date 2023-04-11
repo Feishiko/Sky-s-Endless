@@ -52,9 +52,18 @@ if(hp > 0) {
 		if(harvests.tiles = 3 || harvests.tiles = 5 || harvests.tiles = 7) {
 			audio_play_sound(sndPick, 10, false);
 			TimePassed();
-			ItemPick(harvests.tiles - 2, 1);
-			ItemPick(harvests.tiles - 3, 2);
+			ItemPick(harvests.tiles - 2, 1 + harvests.doubled + harvests.foreverDoubled);
+			ItemPick(harvests.tiles - 3, 2 + harvests.doubled*2 + harvests.foreverDoubled*2);
+			if(harvests.explode) {
+				instance_create_depth(x, y, -20, oLightCircle);
+			}
+			if(harvests.foreverExplode) {
+				instance_create_depth(x, y, -20, oLightCircle);
+			}
 			harvests.tiles = 1;
+			harvests.doubled = false;
+			harvests.explode = false;
+			harvests.faster = false;
 			oGameCont.tiles[harvests.row, harvests.column] = 1;
 		}
 	}
@@ -120,67 +129,111 @@ if(hp > 0) {
 			var border = collision_point(x - 8, y, oBorder, 1, 1);
 			if(border) {
 				if(buildingStuff == oBlindage) {
-					var stuff = instance_create_depth(x - 8, y, -20, buildingStuff);
+					var stuff = instance_create_depth(x - 8, y, -20, buildingStuff, {
+						doubled : oPlayer.buildingBuff[0],
+						explode : oPlayer.buildingBuff[1]
+					});
 					stuff.image_angle = 180;
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				if(buildingStuff == oTile) {
 					audio_play_sound(sndUse, 10, false);
 					var space = collision_point(x - 8, y, oTile, 1, 1);
+					space.foreverDoubled = buildingBuff[0];
+					space.foreverExplode = buildingBuff[1];
+					space.foreverFaster = buildingBuff[2];
 					oGameCont.tiles[space.row, space.column] = 1;	
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
-				TimePassed();
 			}
 		}
 		if(RIGHT) {
 			var border = collision_point(x + 8, y, oBorder, 1, 1);
 			if(border) {
 				if(buildingStuff == oBlindage) {
-					instance_create_depth(x + 8, y, -20, buildingStuff);
+					var stuff = instance_create_depth(x + 8, y, -20, buildingStuff, {
+						doubled : oPlayer.buildingBuff[0],
+						explode : oPlayer.buildingBuff[1]
+					});
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				if(buildingStuff == oTile) {
 					audio_play_sound(sndUse, 10, false);
 					var space = collision_point(x + 8, y, oTile, 1, 1);
+					space.foreverDoubled = buildingBuff[0];
+					space.foreverExplode = buildingBuff[1];
+					space.foreverFaster = buildingBuff[2];
 					oGameCont.tiles[space.row, space.column] = 1;	
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
-				TimePassed();
 			}
 		}
 		if(UP) {
 			var border = collision_point(x, y - 8, oBorder, 1, 1);
 			if(border) {
 				if(buildingStuff == oBlindage) {
-					var stuff = instance_create_depth(x, y - 8, -20, buildingStuff);
+					var stuff = instance_create_depth(x, y - 8, -20, buildingStuff, {
+						doubled : oPlayer.buildingBuff[0],
+						explode : oPlayer.buildingBuff[1]
+					});
 					stuff.image_angle = 90;
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				if(buildingStuff == oTile) {
 					audio_play_sound(sndUse, 10, false);
 					var space = collision_point(x, y - 8, oTile, 1, 1);
+					space.foreverDoubled = buildingBuff[0];
+					space.foreverExplode = buildingBuff[1];
+					space.foreverFaster = buildingBuff[2];
 					oGameCont.tiles[space.row, space.column] = 1;	
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				instance_destroy(oBorder);
 				buildingMode = false;
-				TimePassed();
 			}
 		}
 		if(DOWN) {
 			var border = collision_point(x, y + 8, oBorder, 1, 1);
 			if(border) {
 				if(buildingStuff == oBlindage) {
-					var stuff = instance_create_depth(x, y + 8, -20, buildingStuff);
+					var stuff = instance_create_depth(x, y + 8, -20, buildingStuff, {
+						doubled : oPlayer.buildingBuff[0],
+						explode : oPlayer.buildingBuff[1]
+					});
 					stuff.image_angle = 270;
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				if(buildingStuff == oTile) {
 					audio_play_sound(sndUse, 10, false);
 					var space = collision_point(x, y + 8, oTile, 1, 1);
+					space.foreverDoubled = buildingBuff[0];
+					space.foreverExplode = buildingBuff[1];
+					space.foreverFaster = buildingBuff[2];
 					oGameCont.tiles[space.row, space.column] = 1;	
+					if(!buildingBuff[2]) {
+						TimePassed();
+					}
 				}
 				instance_destroy(oBorder);	
 				buildingMode = false;
-				TimePassed();
 			}
 		}
 	}

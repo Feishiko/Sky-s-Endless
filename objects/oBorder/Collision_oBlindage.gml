@@ -1,8 +1,13 @@
 if(weaponType == 0) {
-	with(other) {
-		hp -= 1;
+	/*with(other) {
+		hp -= 1 + self.doubledPistol;
 		Brick(x, y);
+	}*/
+	other.hp -= 1*(1 + doubledPistol)*(1 + doubledBullet);
+	if(explode) {
+		instance_create_depth(x, y, -20, oLightCircle);	
 	}
+	Brick(other.x, other.y);
 	instance_destroy();
 }
 

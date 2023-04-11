@@ -11,6 +11,9 @@ if(hp > 0) {
 }	
 
 if(preHP != hp) {
+	if(explode) {
+		instance_create_depth(x, y, -20, oLightCircle)
+	}
 	preHP = hp;
 	image_xscale = 0;
 	image_yscale = 0;
@@ -25,8 +28,14 @@ var down = collision_point(x, y + 8, oBlindage, 1, 1);
 if(!corner) {
 	//↘
 	if(left && up) {
-		var blindage1 = instance_create_depth(x, y, -20, oBlindage);
-		var blindage2 = instance_create_depth(x, y, -20, oBlindage);
+		var blindage1 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
+		var blindage2 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
 		blindage1.image_angle = 0;
 		blindage2.image_angle = 270;
 		blindage1.corner = true;
@@ -36,8 +45,14 @@ if(!corner) {
 
 	//↙
 	if(right && up) {
-		var blindage1 = instance_create_depth(x, y, -20, oBlindage);
-		var blindage2 = instance_create_depth(x, y, -20, oBlindage);
+		var blindage1 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
+		var blindage2 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
 		blindage1.image_angle = 180;
 		blindage2.image_angle = 270;
 		blindage1.corner = true;
@@ -47,8 +62,14 @@ if(!corner) {
 
 	//↖
 	if(down && right) {
-		var blindage1 = instance_create_depth(x, y, -20, oBlindage);
-		var blindage2 = instance_create_depth(x, y, -20, oBlindage);
+		var blindage1 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
+		var blindage2 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
 		blindage1.image_angle = 180;
 		blindage2.image_angle = 90;
 		blindage1.corner = true;
@@ -58,8 +79,14 @@ if(!corner) {
 
 	//↗
 	if(left && down) {
-		var blindage1 = instance_create_depth(x, y, -20, oBlindage);
-		var blindage2 = instance_create_depth(x, y, -20, oBlindage);
+		var blindage1 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
+		var blindage2 = instance_create_depth(x, y, -20, oBlindage, {
+			doubled : self.doubled,
+			explode : self.explode
+		});
 		blindage1.image_angle = 0;
 		blindage2.image_angle = 90;
 		blindage1.corner = true;

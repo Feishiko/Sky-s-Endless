@@ -113,8 +113,9 @@ if(oPlayer.hp > 0) {
 				CraftListPush(11);	
 			}
 			//Potion
-			if(ItemExists(0, 100) && ItemExists(2, 100) && ItemExists(4, 100) && ItemExists(1, 150)) {
+			if(ItemExists(0, 100) && ItemExists(2, 100) && ItemExists(4, 100) && ItemExists(1, 100)) {
 				CraftListPush(12);	
+				//show_message("1");
 			}
 			craftListMax = 0;
 			for(var sequence = 0; sequence < 7; sequence++) {
@@ -148,7 +149,7 @@ if(oPlayer.hp > 0) {
 				case 11: Craft(11, 1);break;
 				case 12: Craft(12, 1);break;
 			}
-			TimePassed();
+			//TimePassed();
 			craftMode = false;
 		}
 	}
@@ -299,7 +300,7 @@ if(oPlayer.hp > 0) {
 	}
 
 	with(oBlindage) {
-		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/8)";	
+		oGameCont.messageBox[x div 8, y div 8] = JsonGetValue("message_box_20") + "(" + string(hp) + "/" + string(maxhp) + ")";	
 	}
 
 	with(oMonster) {

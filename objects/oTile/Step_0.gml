@@ -11,7 +11,8 @@ if(tiles == -1) {
 
 if(tiles == 2 || tiles == 4 || tiles == 6) {
 	if(growthTo == 0) {
-		growthTo = irandom_range(25, 30) - instance_exists(oRain)*10;
+		growthTo = irandom_range(25, 30) - instance_exists(oRain)*10 - faster*10 - foreverFaster*10;
+		growthTo = max(growthTo, 0);
 		growth = 0;
 	}
 	
