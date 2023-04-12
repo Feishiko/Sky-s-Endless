@@ -15,6 +15,7 @@
     {"name":"shNight","order":1,"path":"shaders/shNight/shNight.yy",},
     {"name":"sndCount","order":18,"path":"sounds/sndCount/sndCount.yy",},
     {"name":"sndGrenade","order":4,"path":"sounds/sndGrenade/sndGrenade.yy",},
+    {"name":"oTutorial","order":30,"path":"objects/oTutorial/oTutorial.yy",},
     {"name":"oRainDot","order":19,"path":"objects/oRainDot/oRainDot.yy",},
     {"name":"fontPixelMenuChs","order":2,"path":"fonts/fontPixelMenuChs/fontPixelMenuChs.yy",},
     {"name":"sPlayerDead","order":3,"path":"sprites/sPlayerDead/sPlayerDead.yy",},

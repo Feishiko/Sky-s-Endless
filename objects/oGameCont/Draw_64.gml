@@ -1,9 +1,3 @@
-//draw_text(0, 0, "day " + string(day));
-/*
-draw_text(0, 0, "doubled: " + string(oPlayer.items[6, 2]));
-draw_text(0, 20, "explode: " + string(oPlayer.items[6, 3]));
-draw_text(0, 40, "faster: " + string(oPlayer.items[6, 4]));
-*/
 //Environment
 if(instance_exists(oEclipse)) {
 	if(oEclipse.eclipse) {

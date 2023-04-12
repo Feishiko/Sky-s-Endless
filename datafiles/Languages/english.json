@@ -13,7 +13,7 @@
     "craft_list_4" : "Bread - 4 Wheats",
     "craft_list_5" : "Plough - All types of 2 seeds 4 wheats",
     "craft_list_6" : "Grenade - 1 Iron 4 Powder",
-    "craft_list_7" : "Random Potion - All types of 100 seeds 100 wheats",
+    "craft_list_7" : "Random Potion - All types of 50 seeds 50 wheats",
     "item_0" : "Wheat Seed",
     "item_1" : "Wheat",
     "item_2" : "Iron Seed",
@@ -66,5 +66,12 @@
     "you_killed" : "You killed ",
     "potion_word_1" : "You gain a new talent about Double Hitpoint",
     "potion_word_2" : "You gain a new talent about Explode all Monster",
-    "potion_word_3" : "You gain a new talent about More Faster"
+    "potion_word_3" : "You gain a new talent about More Faster",
+    "tutorial_1" : "WASD - MOVE",
+    "tutorial_2" : "You need to plant seed to make sure\nyou have enough resource during the night\nUsing LMB or E to use a item",
+    "tutorial_3" : "Using Mouse Wheel or Number Keys to select items\nTry to plant the other types",
+    "tutorial_4" : "Move around or Using RMB to skip time\nPlants needs time to growth\nYou can also hover your mouse over them to check out\nhow many turns still need",
+    "tutorial_5" : "Great!\nThere has one plant growth out\nStand on them and using SPACEBAR to HARVEST them\nby the way, pick up items is also SPACEBAR",
+    "tutorial_6" : "You'd better make a pistol and some bullet\nto protect yourself during the night\nUsing C to check out how to make a pistol and some bullets",
+    "tutorial_7" : "Using TAB to see more controlls about this game\nTake your time^^"
 }

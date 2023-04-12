@@ -1,3 +1,5 @@
+//Player Logic
+
 if(oPlayer.hp > 0) {
 	var UP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 	var DOWN = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
@@ -113,7 +115,7 @@ if(oPlayer.hp > 0) {
 				CraftListPush(11);	
 			}
 			//Potion
-			if(ItemExists(0, 100) && ItemExists(2, 100) && ItemExists(4, 100) && ItemExists(1, 100)) {
+			if(ItemExists(0, 50) && ItemExists(2, 50) && ItemExists(4, 50) && ItemExists(1, 50)) {
 				CraftListPush(12);	
 				//show_message("1");
 			}

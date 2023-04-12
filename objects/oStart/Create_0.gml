@@ -29,11 +29,18 @@ global.Emitter = audio_emitter_create();
 audio_emitter_gain(global.Emitter, 0);
 
 global.highScore = -1;
+global.tutorial = false;
 
 if(file_exists("highScore")) {
 	file = file_text_open_read("highScore");
 	global.highScore = file_text_read_real(file);
 	file_text_close(file);
+}
+
+if(file_exists("tutorial")) {
+	file = file_text_open_read("highScore");
+	global.tutorial = file_text_read_real(file);
+	file_text_close(file);	
 }
 
 room_goto_next();

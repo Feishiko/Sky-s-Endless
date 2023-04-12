@@ -9,6 +9,12 @@ function ItemUse(_sequence) {
 				harvests.doubled = oPlayer.items[_sequence, 2];
 				harvests.explode = oPlayer.items[_sequence, 3];
 				harvests.faster = oPlayer.items[_sequence, 4];
+				
+				// Tutorial
+				if(instance_exists(oTutorial)) {
+					oTutorial.tutoTiles += 1;	
+				}
+				
 				TimePassed();
 				audio_play_sound(sndUse, 10, false);
 				oPlayer.items[_sequence, 1] -= 1;	

@@ -44,6 +44,7 @@
     {"id":{"name":"shNight","path":"shaders/shNight/shNight.yy",},},
     {"id":{"name":"sndCount","path":"sounds/sndCount/sndCount.yy",},},
     {"id":{"name":"sndGrenade","path":"sounds/sndGrenade/sndGrenade.yy",},},
+    {"id":{"name":"oTutorial","path":"objects/oTutorial/oTutorial.yy",},},
     {"id":{"name":"oRainDot","path":"objects/oRainDot/oRainDot.yy",},},
     {"id":{"name":"fontPixelMenuChs","path":"fonts/fontPixelMenuChs/fontPixelMenuChs.yy",},},
     {"id":{"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},},
