@@ -74,7 +74,7 @@ if(oPlayer.hp > 0) {
 					case 9: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_4"));break;
 					case 10: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_5"));break;
 					case 11: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_6"));break;
-					case 12: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_7"));break;
+					case 12: draw_text(90, 20 + sequence * 10, JsonGetValue("craft_list_" + string(!firstPotion + 7)));break;
 					default: draw_text(90, 20 + sequence * 10, "");break;
 				}
 			}
@@ -83,7 +83,11 @@ if(oPlayer.hp > 0) {
 			var _seq = 0;
 			for(var sequence = 0; sequence < 7; sequence++) {
 				if(!CraftListExists(6 + sequence)) {
-					draw_text(90, 20 + craftListMax * 10 + _seq * 10, JsonGetValue("craft_list_" + string(sequence + 1)));
+					if(sequence == 6) {
+						draw_text(90, 20 + craftListMax * 10 + _seq * 10, JsonGetValue("craft_list_" + string(sequence + 1 + !firstPotion)));	
+					} else {
+						draw_text(90, 20 + craftListMax * 10 + _seq * 10, JsonGetValue("craft_list_" + string(sequence + 1)));
+					}
 					_seq += 1
 				}
 			}
@@ -141,7 +145,7 @@ if(oPlayer.hp > 0) {
 					case 9: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_4"));break;
 					case 10: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_5"));break;
 					case 11: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_6"));break;
-					case 12: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_7"));break;
+					case 12: draw_text(90, 20 + sequence * 14, JsonGetValue("craft_list_" + string(!firstPotion + 7)));break;
 					default: draw_text(90, 20 + sequence * 14, "");break;
 				}
 			}
@@ -150,7 +154,11 @@ if(oPlayer.hp > 0) {
 			var _seq = 0;
 			for(var sequence = 0; sequence < 7; sequence++) {
 				if(!CraftListExists(6 + sequence)) {
-					draw_text(90, 20 + craftListMax * 14 + _seq * 14, JsonGetValue("craft_list_" + string(sequence + 1)));
+					if(sequence == 6) {
+						draw_text(90, 20 + craftListMax * 14 + _seq * 14, JsonGetValue("craft_list_" + string(sequence + 1 + !firstPotion)));
+					} else {
+						draw_text(90, 20 + craftListMax * 14 + _seq * 14, JsonGetValue("craft_list_" + string(sequence + 1)));	
+					}
 					_seq += 1
 				}
 			}

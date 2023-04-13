@@ -39,9 +39,18 @@ if(!global.tutorial) {
 			nextStep[3] = true;	
 		}
 	}
-	if(nextStep[3]) {
+	if(nextStep[3] && !nextStep[4]) {
 		draw_set_halign(fa_right);
+		draw_set_color(c_black);
+		draw_arrow(100 + sin(current_time/100)*2, 25, 85 + sin(current_time/100)*2, 25, 8);
 		DrawOutline(room_width - 20, room_height/2 + 60 + sin(current_time/200)*2, JsonGetValue("tutorial_7"), c_white, c_black);
+		if(oPlayer.items[0, 0] == 6) {
+			nextStep[4] = true;	
+		}
+	}
+	if(nextStep[4]) {
+		draw_set_halign(fa_right);
+		DrawOutline(room_width - 20, room_height/2 + 60 + sin(current_time/200)*2, JsonGetValue("tutorial_8"), c_white, c_black);
 		if(instance_exists(oHelp)) {
 			var file = file_text_open_write("tutorial");
 			file_text_write_real(file, true);

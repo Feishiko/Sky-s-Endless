@@ -52,8 +52,8 @@ if(hp > 0) {
 		if(harvests.tiles = 3 || harvests.tiles = 5 || harvests.tiles = 7) {
 			audio_play_sound(sndPick, 10, false);
 			TimePassed();
-			ItemPick(harvests.tiles - 2, 1 + harvests.doubled + harvests.foreverDoubled);
-			ItemPick(harvests.tiles - 3, 2 + harvests.doubled*2 + harvests.foreverDoubled*2);
+			ItemPick(harvests.tiles - 2, 1*(1 + harvests.doubled)*(1 + harvests.foreverDoubled));
+			ItemPick(harvests.tiles - 3, 2*(1 + harvests.doubled)*(1 + harvests.foreverDoubled));
 			if(harvests.explode) {
 				instance_create_depth(x, y, -20, oLightCircle);
 			}

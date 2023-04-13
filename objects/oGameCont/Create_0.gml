@@ -28,6 +28,7 @@ tiles[( (room_width div 8) / 2 ) + 1, ( (room_height div 8) / 2 ) + 1] = 1;
 select = 0;//Bag's select
 
 craftMode = false;//Craft Mode
+firstPotion = false;//the potion
 
 shift[0] = -1;//ItemID
 shift[1] = -1;//ItemNumber

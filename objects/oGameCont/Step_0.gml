@@ -111,14 +111,14 @@ if(oPlayer.hp > 0) {
 				CraftListPush(10);	
 			}
 			//Grenade
-			if(ItemExists(3, 1) && ItemExists(5, 2)) {
+			if(ItemExists(3, 1) && ItemExists(5, 4)) {
 				CraftListPush(11);	
 			}
 			//Potion
-			if(ItemExists(0, 50) && ItemExists(2, 50) && ItemExists(4, 50) && ItemExists(1, 50)) {
+			if(ItemExists(0, 50 - !firstPotion*20) && ItemExists(2, 50 - !firstPotion*20) && ItemExists(4, 50 - !firstPotion*20) && ItemExists(1, 50 - !firstPotion*20)) {
 				CraftListPush(12);	
-				//show_message("1");
-			}
+			}	
+			
 			craftListMax = 0;
 			for(var sequence = 0; sequence < 7; sequence++) {
 				if(craftList[sequence] != -1) {

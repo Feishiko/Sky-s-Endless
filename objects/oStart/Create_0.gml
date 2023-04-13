@@ -1,6 +1,6 @@
 randomize();
 global.language = 1;//0 - English, 1 - Chinese
-window_set_cursor(cr_none);
+//window_set_cursor(cr_none);
 //window_set_size(720, 720);
 
 //Read Language Data
@@ -38,7 +38,7 @@ if(file_exists("highScore")) {
 }
 
 if(file_exists("tutorial")) {
-	file = file_text_open_read("highScore");
+	file = file_text_open_read("tutorial");
 	global.tutorial = file_text_read_real(file);
 	file_text_close(file);	
 }

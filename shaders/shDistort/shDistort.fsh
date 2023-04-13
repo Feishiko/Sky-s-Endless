@@ -14,6 +14,6 @@ void main()
 {
 	float noise = random(v_vTexcoord + u_time/10000.);
 	noise = step(.1, noise);
-    gl_FragColor = texture2D( gm_BaseTexture, v_vTexcoord)*vec4(1., 0.2, 0.2, 1.);
+    gl_FragColor = texture2D( gm_BaseTexture, v_vTexcoord)*vec4(.5, 0.2, 0.2, .4);
 	//gl_FragColor *= vec4(noise, noise, noise, 1.);
 }

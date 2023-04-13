@@ -93,10 +93,11 @@ function Craft(_itemID, _number){
 			}
 		};break;
 		case 12: {
-			item = ItemDelete(0, 100);
-			item1 = ItemDelete(2, 100);
-			item2 = ItemDelete(4, 100);
-			item3 = ItemDelete(1, 100);
+			item = ItemDelete(0, 50 - !firstPotion*20);
+			item1 = ItemDelete(2, 50 - !firstPotion*20);
+			item2 = ItemDelete(4, 50 - !firstPotion*20);
+			item3 = ItemDelete(1, 50 - !firstPotion*20);
+			firstPotion = true;
 			if(oPlayer.items[item, 4] && oPlayer.items[item1, 4] && oPlayer.items[item2, 4] && oPlayer.items[item3, 4]) {
 				faster = true;	
 			} else {

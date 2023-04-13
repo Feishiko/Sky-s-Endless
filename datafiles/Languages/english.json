@@ -14,6 +14,12 @@
     "craft_list_5" : "Plough - All types of 2 seeds 4 wheats",
     "craft_list_6" : "Grenade - 1 Iron 4 Powder",
     "craft_list_7" : "Random Potion - All types of 50 seeds 50 wheats",
+    "craft_list_8" : "Random Potion - All types of 30 seeds 30 wheats(40% off)",
+    "guidence_1" : "Blindage can defense you from enemies's attack\nThey can only be placed on an empty tile",
+    "guidence_2" : "Bread can regain your hitpoint",
+    "guidence_3" : "Plough can plant seed or placed blindage",
+    "guidence_4" : "Grenade can deal range damage to enemies",
+    "guidence_5" : "Drink a Double/Faster Potion will forever increase your ability\nExplode Potion will destroy all the enemies on the map\nthey can also dipped items on the ground\nSuch like if Pistol was dipped by a Double Potion\nit will cause double damage\nEvery item can be dipped, and has a effect\nYou can dip multi-items in the same time\nthe same item can have multi-effect",
     "item_0" : "Wheat Seed",
     "item_1" : "Wheat",
     "item_2" : "Iron Seed",
@@ -70,8 +76,9 @@
     "tutorial_1" : "WASD - MOVE",
     "tutorial_2" : "You need to plant seed to make sure\nyou have enough resource during the night\nUsing LMB or E to use a item",
     "tutorial_3" : "Using Mouse Wheel or Number Keys to select items\nTry to plant the other types",
-    "tutorial_4" : "Move around or Using RMB to skip time\nPlants needs time to growth\nYou can also hover your mouse over them to check out\nhow many turns still need",
+    "tutorial_4" : "Move around to skip time\nPlants needs time to growth\nYou can also hover your mouse over them to check out\nhow many turns still need",
     "tutorial_5" : "Great!\nThere has one plant growth out\nStand on them and using SPACEBAR to HARVEST them\nby the way, pick up items is also SPACEBAR",
     "tutorial_6" : "You'd better make a pistol and some bullet\nto protect yourself during the night\nUsing C to check out how to make a pistol and some bullets",
-    "tutorial_7" : "Using TAB to see more controlls about this game\nTake your time^^"
+    "tutorial_7" : "Using Shift can grab items from your inventory\n Try to move your pistol to your first place",
+    "tutorial_8" : "Using TAB to see more controlls about this game\nTake your time^^"
 }
