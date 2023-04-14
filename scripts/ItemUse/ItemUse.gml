@@ -202,10 +202,12 @@ function ItemUse(_sequence) {
 	
 	if(oPlayer.items[_sequence, 0] == 14) {
 		PotionWord(JsonGetValue("potion_word_3"));
+		/*
 		repeat(20) {
 			instance_create_depth(x, y, -20, oPotionPartical);	
 		}
 		oPlayer.spd += 1;
 		oPlayer.items[_sequence, 1] -= 1;
+		*/
 	}
 }

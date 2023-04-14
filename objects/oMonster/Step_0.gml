@@ -3,6 +3,10 @@ if(!attack) {
 	y = lerp(y, gridY*8 + 4, .1);
 }
 
+if(!instance_exists(oNight)) {
+	hp = 0;	
+}
+
 if(hp <= 0) {
 	image_xscale = lerp(image_xscale, 0, .1);	
 	image_yscale = lerp(image_yscale, 0, .1);	
