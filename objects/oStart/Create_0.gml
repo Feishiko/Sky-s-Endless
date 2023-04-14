@@ -43,4 +43,9 @@ if(file_exists("tutorial")) {
 	file_text_close(file);	
 }
 
-room_goto_next();
+alpha = 0;
+alphaTo = 0;
+
+alarm[0] = 60;
+alarm[1] = 260;
+alarm[2] = 420;

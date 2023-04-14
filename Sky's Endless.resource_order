@@ -21,6 +21,7 @@
     {"name":"sPlayerDead","order":3,"path":"sprites/sPlayerDead/sPlayerDead.yy",},
     {"name":"oPotionSplit","order":26,"path":"objects/oPotionSplit/oPotionSplit.yy",},
     {"name":"sBlood","order":10,"path":"sprites/sBlood/sBlood.yy",},
+    {"name":"sLogo","order":18,"path":"sprites/sLogo/sLogo.yy",},
     {"name":"Craft","order":7,"path":"scripts/Craft/Craft.yy",},
     {"name":"fontPixelSmall","order":1,"path":"fonts/fontPixelSmall/fontPixelSmall.yy",},
     {"name":"oBoom","order":28,"path":"objects/oBoom/oBoom.yy",},

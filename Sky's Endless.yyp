@@ -50,6 +50,7 @@
     {"id":{"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},},
     {"id":{"name":"oPotionSplit","path":"objects/oPotionSplit/oPotionSplit.yy",},},
     {"id":{"name":"sBlood","path":"sprites/sBlood/sBlood.yy",},},
+    {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},},
     {"id":{"name":"Craft","path":"scripts/Craft/Craft.yy",},},
     {"id":{"name":"fontPixelSmall","path":"fonts/fontPixelSmall/fontPixelSmall.yy",},},
     {"id":{"name":"oBoom","path":"objects/oBoom/oBoom.yy",},},
