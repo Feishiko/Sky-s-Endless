@@ -4,6 +4,10 @@ draw_set_valign(fa_top);
 draw_set_color(c_black);
 DrawOutline(room_width/2, 0, "Game By Feishiko", c_white, c_black);
 
+draw_set_halign(fa_right);
+draw_set_valign(fa_top);
+DrawOutline(room_width - 10, 10, JsonGetValue("reset_word"), c_white, c_black);
+
 FontSet("big");
 //draw_set_halign(fa_center);
 draw_set_halign(fa_left);

@@ -80,5 +80,6 @@
     "tutorial_5" : "Great!\nThere has one plant growth out\nStand on them and using SPACEBAR to HARVEST them\nby the way, pick up items is also SPACEBAR",
     "tutorial_6" : "You'd better make a pistol and some bullet\nto protect yourself during the night\nUsing C to check out how to make a pistol and some bullets",
     "tutorial_7" : "Using Shift can grab items from your inventory\n Try to move your pistol to your first place",
-    "tutorial_8" : "Using TAB to see more controlls about this game\nTake your time^^"
+    "tutorial_8" : "Using TAB to see more controlls about this game\nTake your time^^",
+    "reset_word" : "Press R to erase the save"
 }

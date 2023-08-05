@@ -2,6 +2,21 @@ var ENTER = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
 var UP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || mouse_wheel_up();
 var DOWN = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || mouse_wheel_down();
 
+// Reset
+
+if(keyboard_check_pressed(ord("R"))) {
+	if(file_exists("highScore")) {
+		file_delete("highScore");	
+	}
+	if(file_exists("tutorial")) {
+		file_delete("tutorial");	
+	}
+	if(file_exists("guidence")) {
+		file_delete("guidence");
+	}
+	game_restart();
+}
+
 // MUSIC
 MusicPlay(musMenu);
 if(!instance_exists(oIntoGame)) {
